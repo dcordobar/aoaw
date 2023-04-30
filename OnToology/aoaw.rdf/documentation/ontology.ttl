@@ -1,0 +1,1596 @@
+@prefix : <http://www.semanticweb.org/dani/ontologies/aoaw#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/dani/ontologies/aoaw#> .
+
+<http://www.semanticweb.org/dani/ontologies/aoaw> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#ID
+rdf:ID rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#grantTo
+:grantTo rdf:type owl:ObjectProperty ;
+         owl:inverseOf :hasDesignationOrigin ;
+         rdfs:domain :DesignationOrigin ;
+         rdfs:range :Wine .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry
+:hasCountry rdf:type owl:ObjectProperty ;
+            rdfs:domain :Winery .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin
+:hasDesignationOrigin rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Wine ;
+                      rdfs:range :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom
+:madeFrom rdf:type owl:ObjectProperty ;
+          owl:inverseOf :presentOn ;
+          rdfs:domain :Wine ;
+          rdfs:range :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#presentOn
+:presentOn rdf:type owl:ObjectProperty ;
+           rdfs:domain :GrapeVariety ;
+           rdfs:range :Wine .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#producedBy
+:producedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :produces ;
+            rdfs:domain :Wine ;
+            rdfs:range :Winery .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#produces
+:produces rdf:type owl:ObjectProperty ;
+          rdfs:domain :Winery ;
+          rdfs:range :Wine .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#acidity
+:acidity rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Wine ;
+         rdfs:range xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#body
+:body rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Wine ;
+      rdfs:range xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#price
+:price rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Wine ,
+                   [ rdf:type owl:Restriction ;
+                     owl:onProperty :price ;
+                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                     owl:onDataRange xsd:float
+                   ] ;
+       rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#sparkling
+:sparkling rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Wine ;
+           rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#vintage
+:vintage rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Wine ;
+         rdfs:range xsd:positiveInteger .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape
+:AlbarinoGrape rdf:type owl:Class ;
+               rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoWine
+:AlbarinoWine rdf:type owl:Class ;
+              rdfs:subClassOf :WhiteWine ;
+              rdfs:comment "Albariño wine" ;
+              rdfs:label "Albariño wine" .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape
+:CabernetSauvignonGrape rdf:type owl:Class ;
+                        rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape
+:CarignanGrape rdf:type owl:Class ;
+               rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape
+:CarmenereGrape rdf:type owl:Class ;
+                rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape
+:ChardonnayGrape rdf:type owl:Class ;
+                 rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#Country
+:Country rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona
+:DOAbona rdf:type owl:Class ;
+         rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella
+:DOAlella rdf:type owl:Class ;
+          rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante
+:DOAlicante rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa
+:DOAlmansa rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza
+:DOArlanza rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes
+:DOArribes rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo
+:DOBierzo rdf:type owl:Class ;
+          rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem
+:DOBinissalem rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas
+:DOBullas rdf:type owl:Class ;
+          rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud
+:DOCalatayud rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja
+:DOCampoBorja rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas
+:DOCangas rdf:type owl:Class ;
+          rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena
+:DOCarinena rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna
+:DOCataluna rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCava
+:DOCava rdf:type owl:Class ;
+        rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava
+:DOChacoliAlava rdf:type owl:Class ;
+                rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia
+:DOChacoliBizkaia rdf:type owl:Class ;
+                  rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria
+:DOChacoliGetaria rdf:type owl:Class ;
+                  rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales
+:DOCigales rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera
+:DOConcaBarbera rdf:type owl:Class ;
+                rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva
+:DOCondadoHuelva rdf:type owl:Class ;
+                 rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre
+:DOCostersSegre rdf:type owl:Class ;
+                rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro
+:DOElHierro rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda
+:DOEmporda rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria
+:DOGranCanaria rdf:type owl:Class ;
+               rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry
+:DOJerezXeresSherry rdf:type owl:Class ;
+                    rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla
+:DOJumilla rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera
+:DOLaGomera rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha
+:DOLaMancha rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma
+:DOLaPalma rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote
+:DOLanzarote rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon
+:DOLeon rdf:type owl:Class ;
+        rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga
+:DOMalaga rdf:type owl:Class ;
+          rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela
+:DOManchuela rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda
+:DOManzanillaSanlucarBarrameda rdf:type owl:Class ;
+                               rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida
+:DOMentrida rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar
+:DOMondejar rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei
+:DOMonterrei rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles
+:DOMontillaMoriles rdf:type owl:Class ;
+                   rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant
+:DOMontsant rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra
+:DONavarra rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes
+:DOPenedes rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages
+:DOPlaBages rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant
+:DOPlaLlevant rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat
+:DOPriorat rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas
+:DORiasBaixas rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra
+:DORibeiraSacra rdf:type owl:Class ;
+                rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro
+:DORibeiro rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero
+:DORiberaDuero rdf:type owl:Class ;
+               rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana
+:DORiberaGuadiana rdf:type owl:Class ;
+                  rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar
+:DORiberaJucar rdf:type owl:Class ;
+               rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORioja
+:DORioja rdf:type owl:Class ;
+         rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORueda
+:DORueda rdf:type owl:Class ;
+         rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga
+:DOSierrasMálaga rdf:type owl:Class ;
+                 rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano
+:DOSomontano rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo
+:DOTacoronteAcentejo rdf:type owl:Class ;
+                     rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona
+:DOTarragona rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta
+:DOTerraAlta rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora
+:DOTierraVinoZamora rdf:type owl:Class ;
+                    rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOToro
+:DOToro rdf:type owl:Class ;
+        rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles
+:DOUcles rdf:type owl:Class ;
+         rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena
+:DOUtielRequena rdf:type owl:Class ;
+                rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras
+:DOValdeorras rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas
+:DOValdepenas rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia
+:DOValencia rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar
+:DOValleGuimar rdf:type owl:Class ;
+               rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava
+:DOValleOrotava rdf:type owl:Class ;
+                rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid
+:DOVinosMadrid rdf:type owl:Class ;
+               rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora
+:DOYcodenDauteIsora rdf:type owl:Class ;
+                    rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla
+:DOYecla rdf:type owl:Class ;
+         rdfs:subClassOf :DesignationOrigin .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin
+:DesignationOrigin rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :grantTo ;
+                                     owl:someValuesFrom :Wine
+                                   ] .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape
+:GarnachaGrape rdf:type owl:Class ;
+               rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape
+:GewurztraminerGrape rdf:type owl:Class ;
+                     rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety
+:GrapeVariety rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :presentOn ;
+                                owl:someValuesFrom :Wine
+                              ] .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape
+:MacabeoGrape rdf:type owl:Class ;
+              rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape
+:MalbecGrape rdf:type owl:Class ;
+             rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape
+:MerlotGrape rdf:type owl:Class ;
+             rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape
+:MoscatelGrape rdf:type owl:Class ;
+               rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape
+:NebbioloGrape rdf:type owl:Class ;
+               rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape
+:ParelladaGrape rdf:type owl:Class ;
+                rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape
+:PinotMeunierGrape rdf:type owl:Class ;
+                   rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape
+:PinotNoirGrape rdf:type owl:Class ;
+                rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#RedWine
+:RedWine rdf:type owl:Class ;
+         rdfs:subClassOf :Wine .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape
+:RieslingGrape rdf:type owl:Class ;
+               rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#RoseWine
+:RoseWine rdf:type owl:Class ;
+          rdfs:subClassOf :Wine .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape
+:SauvignonBlancGrape rdf:type owl:Class ;
+                     rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape
+:SyrahGrape rdf:type owl:Class ;
+            rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape
+:TempranilloGrape rdf:type owl:Class ;
+                  rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloWine
+:TempranilloWine rdf:type owl:Class ;
+                 rdfs:subClassOf :RedWine .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape
+:TrepatGrape rdf:type owl:Class ;
+             rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape
+:VerdejoGrape rdf:type owl:Class ;
+              rdfs:subClassOf :GrapeVariety .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoWine
+:VerdejoWine rdf:type owl:Class ;
+             rdfs:subClassOf :WhiteWine ;
+             rdfs:comment "Verdejo wine" ;
+             rdfs:label "Verdejo wine" .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#WhiteWine
+:WhiteWine rdf:type owl:Class ;
+           rdfs:subClassOf :Wine .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#Wine
+:Wine rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :madeFrom ;
+                        owl:someValuesFrom :GrapeVariety
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasDesignationOrigin ;
+                        owl:allValuesFrom :DesignationOrigin
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :producedBy ;
+                        owl:allValuesFrom :Winery
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :producedBy ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Winery
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasDesignationOrigin ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :DesignationOrigin
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :acidity ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:positiveInteger
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :body ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:positiveInteger
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :price ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:float
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :sparkling ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:boolean
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :vintage ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:positiveInteger
+                      ] .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#Winery
+:Winery rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :produces ;
+                          owl:someValuesFrom :Wine
+                        ] .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape
+:XarelloGrape rdf:type owl:Class ;
+              rdfs:subClassOf :GrapeVariety .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#Aalto
+:Aalto rdf:type owl:NamedIndividual ,
+                :Winery ;
+       :hasCountry :SpainCountry ;
+       rdfs:comment "Aalto es el emblemático nombre de una bodega que se ha convertido en un referente en la Ribera del Duero. La dilatada experiencia de Mariano García, quien fuera enólogo de Vega Sicilia durante treinta años, se siente en la fuerza y complejidad de los vinos." ;
+       rdfs:label "Bodegas Aalto" .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020
+:Aalto_2020 rdf:type owl:NamedIndividual ,
+                     :TempranilloWine ;
+            :hasDesignationOrigin :DORiberaDuero ;
+            :madeFrom :TempranilloGrape ;
+            :producedBy :Aalto ;
+            :acidity "7"^^xsd:positiveInteger ;
+            :body "8"^^xsd:positiveInteger ;
+            :price "36.95"^^xsd:float ;
+            :sparkling "false"^^xsd:boolean ;
+            :vintage "2020"^^xsd:positiveInteger ;
+            rdfs:comment "Aalto es uno de los grandes referentes de Ribera del Duero, un vino de un gran equilibrio y complejidad, lleno de fuerza y personalidad, maduro y elegante, que debe sus virtudes a unas magníficas uvas de la variedad tinta fina (tempranillo), a una diversidad de suelos y a la vasta experiencia de Mariano García, el enólogo que durante treinta años fue el responsable de la elaboración de los vinos de Vega Sicilia. Desde siempre, ha sido uno de los mejores ejemplos de ribera moderno, convertido hoy en un clásico, un ribera esencial y un vino para las grandes ocasiones." ;
+            rdfs:label "Aalto 2020" .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape
+:AlbarinoGrape rdf:type owl:NamedIndividual ,
+                        :AlbarinoGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo
+:Angel_Lorenzo_Cachazo rdf:type owl:NamedIndividual ,
+                                :Winery ;
+                       :hasCountry :SpainCountry ;
+                       rdfs:comment "Bodegas Ángel Lorenzo Cachazo" ;
+                       rdfs:label "Ángel Lorenzo Cachazo" .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax
+:Bodegas_Martin_Codax rdf:type owl:NamedIndividual ,
+                               :Winery ;
+                      :hasCountry :SpainCountry ;
+                      rdfs:comment "Bodegas Martín Códax" ;
+                      rdfs:label "Bodegas Martín Códax" .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape
+:CabernetSauvignonGrape rdf:type owl:NamedIndividual ,
+                                 :CabernetSauvignonGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape
+:CarignanGrape rdf:type owl:NamedIndividual ,
+                        :CarignanGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape
+:CarmenereGrape rdf:type owl:NamedIndividual ,
+                         :CarmenereGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape
+:ChardonnayGrape rdf:type owl:NamedIndividual ,
+                          :ChardonnayGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona
+:DOAbona rdf:type owl:NamedIndividual ,
+                  :DOAbona .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella
+:DOAlella rdf:type owl:NamedIndividual ,
+                   :DOAlella .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante
+:DOAlicante rdf:type owl:NamedIndividual ,
+                     :DOAlicante .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa
+:DOAlmansa rdf:type owl:NamedIndividual ,
+                    :DOAlmansa .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza
+:DOArlanza rdf:type owl:NamedIndividual ,
+                    :DOArlanza .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes
+:DOArribes rdf:type owl:NamedIndividual ,
+                    :DOArribes .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo
+:DOBierzo rdf:type owl:NamedIndividual ,
+                   :DOBierzo .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem
+:DOBinissalem rdf:type owl:NamedIndividual ,
+                       :DOBinissalem .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas
+:DOBullas rdf:type owl:NamedIndividual ,
+                   :DOBullas .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud
+:DOCalatayud rdf:type owl:NamedIndividual ,
+                      :DOCalatayud .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja
+:DOCampoBorja rdf:type owl:NamedIndividual ,
+                       :DOCampoBorja .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas
+:DOCangas rdf:type owl:NamedIndividual ,
+                   :DOCangas .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena
+:DOCarinena rdf:type owl:NamedIndividual ,
+                     :DOCarinena .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna
+:DOCataluna rdf:type owl:NamedIndividual ,
+                     :DOCataluna .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCava
+:DOCava rdf:type owl:NamedIndividual ,
+                 :DOCava .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava
+:DOChacoliAlava rdf:type owl:NamedIndividual ,
+                         :DOChacoliAlava .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia
+:DOChacoliBizkaia rdf:type owl:NamedIndividual ,
+                           :DOChacoliBizkaia .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria
+:DOChacoliGetaria rdf:type owl:NamedIndividual ,
+                           :DOChacoliGetaria .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales
+:DOCigales rdf:type owl:NamedIndividual ,
+                    :DOCigales .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera
+:DOConcaBarbera rdf:type owl:NamedIndividual ,
+                         :DOConcaBarbera .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva
+:DOCondadoHuelva rdf:type owl:NamedIndividual ,
+                          :DOCondadoHuelva .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre
+:DOCostersSegre rdf:type owl:NamedIndividual ,
+                         :DOCostersSegre .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro
+:DOElHierro rdf:type owl:NamedIndividual ,
+                     :DOElHierro .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda
+:DOEmporda rdf:type owl:NamedIndividual ,
+                    :DOEmporda .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria
+:DOGranCanaria rdf:type owl:NamedIndividual ,
+                        :DOGranCanaria .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry
+:DOJerezXeresSherry rdf:type owl:NamedIndividual ,
+                             :DOJerezXeresSherry .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla
+:DOJumilla rdf:type owl:NamedIndividual ,
+                    :DOJumilla .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera
+:DOLaGomera rdf:type owl:NamedIndividual ,
+                     :DOLaGomera .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha
+:DOLaMancha rdf:type owl:NamedIndividual ,
+                     :DOLaMancha .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma
+:DOLaPalma rdf:type owl:NamedIndividual ,
+                    :DOLaPalma .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote
+:DOLanzarote rdf:type owl:NamedIndividual ,
+                      :DOLanzarote .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon
+:DOLeon rdf:type owl:NamedIndividual ,
+                 :DOLeon .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga
+:DOMalaga rdf:type owl:NamedIndividual ,
+                   :DOMalaga .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela
+:DOManchuela rdf:type owl:NamedIndividual ,
+                      :DOManchuela .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda
+:DOManzanillaSanlucarBarrameda rdf:type owl:NamedIndividual ,
+                                        :DOManzanillaSanlucarBarrameda .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida
+:DOMentrida rdf:type owl:NamedIndividual ,
+                     :DOMentrida .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar
+:DOMondejar rdf:type owl:NamedIndividual ,
+                     :DOMondejar .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei
+:DOMonterrei rdf:type owl:NamedIndividual ,
+                      :DOMonterrei .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles
+:DOMontillaMoriles rdf:type owl:NamedIndividual ,
+                            :DOMontillaMoriles .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant
+:DOMontsant rdf:type owl:NamedIndividual ,
+                     :DOMontsant .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra
+:DONavarra rdf:type owl:NamedIndividual ,
+                    :DONavarra .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes
+:DOPenedes rdf:type owl:NamedIndividual ,
+                    :DOPenedes .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages
+:DOPlaBages rdf:type owl:NamedIndividual ,
+                     :DOPlaBages .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant
+:DOPlaLlevant rdf:type owl:NamedIndividual ,
+                       :DOPlaLlevant .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat
+:DOPriorat rdf:type owl:NamedIndividual ,
+                    :DOPriorat .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas
+:DORiasBaixas rdf:type owl:NamedIndividual ,
+                       :DORiasBaixas .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra
+:DORibeiraSacra rdf:type owl:NamedIndividual ,
+                         :DORibeiraSacra .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro
+:DORibeiro rdf:type owl:NamedIndividual ,
+                    :DORibeiro .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero
+:DORiberaDuero rdf:type owl:NamedIndividual ,
+                        :DORiberaDuero .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana
+:DORiberaGuadiana rdf:type owl:NamedIndividual ,
+                           :DORiberaGuadiana .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar
+:DORiberaJucar rdf:type owl:NamedIndividual ,
+                        :DORiberaJucar .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORioja
+:DORioja rdf:type owl:NamedIndividual ,
+                  :DORioja .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DORueda
+:DORueda rdf:type owl:NamedIndividual ,
+                  :DORueda .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga
+:DOSierrasMálaga rdf:type owl:NamedIndividual ,
+                          :DOSierrasMálaga .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano
+:DOSomontano rdf:type owl:NamedIndividual ,
+                      :DOSomontano .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo
+:DOTacoronteAcentejo rdf:type owl:NamedIndividual ,
+                              :DOTacoronteAcentejo .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona
+:DOTarragona rdf:type owl:NamedIndividual ,
+                      :DOTarragona .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta
+:DOTerraAlta rdf:type owl:NamedIndividual ,
+                      :DOTerraAlta .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora
+:DOTierraVinoZamora rdf:type owl:NamedIndividual ,
+                             :DOTierraVinoZamora .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOToro
+:DOToro rdf:type owl:NamedIndividual ,
+                 :DOToro .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles
+:DOUcles rdf:type owl:NamedIndividual ,
+                  :DOUcles .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena
+:DOUtielRequena rdf:type owl:NamedIndividual ,
+                         :DOUtielRequena .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras
+:DOValdeorras rdf:type owl:NamedIndividual ,
+                       :DOValdeorras .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas
+:DOValdepenas rdf:type owl:NamedIndividual ,
+                       :DOValdepenas .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia
+:DOValencia rdf:type owl:NamedIndividual ,
+                     :DOValencia .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar
+:DOValleGuimar rdf:type owl:NamedIndividual ,
+                        :DOValleGuimar .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava
+:DOValleOrotava rdf:type owl:NamedIndividual ,
+                         :DOValleOrotava .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid
+:DOVinosMadrid rdf:type owl:NamedIndividual ,
+                        :DOVinosMadrid .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora
+:DOYcodenDauteIsora rdf:type owl:NamedIndividual ,
+                             :DOYcodenDauteIsora .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla
+:DOYecla rdf:type owl:NamedIndividual ,
+                  :DOYecla .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021
+:El_Perro_Verde_2021 rdf:type owl:NamedIndividual ,
+                              :VerdejoWine ;
+                     :hasDesignationOrigin :DORueda ;
+                     :madeFrom :VerdejoGrape ;
+                     :producedBy :Angel_Lorenzo_Cachazo ;
+                     :acidity "6"^^xsd:positiveInteger ;
+                     :body "4"^^xsd:positiveInteger ;
+                     :price "10.9"^^xsd:float ;
+                     :sparkling "false"^^xsd:boolean ;
+                     :vintage "2021"^^xsd:positiveInteger ;
+                     rdfs:comment "Verdejo El Perro Verde 2021" ;
+                     rdfs:label "El Perro Verde 2021" .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape
+:GarnachaGrape rdf:type owl:NamedIndividual ,
+                        :GarnachaGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape
+:GewurztraminerGrape rdf:type owl:NamedIndividual ,
+                              :GewurztraminerGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape
+:MacabeoGrape rdf:type owl:NamedIndividual ,
+                       :MacabeoGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape
+:MalbecGrape rdf:type owl:NamedIndividual ,
+                      :MalbecGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021
+:Marieta_2021 rdf:type owl:NamedIndividual ,
+                       :AlbarinoWine ;
+              :hasDesignationOrigin :DORiasBaixas ;
+              :madeFrom :AlbarinoGrape ;
+              :producedBy :Bodegas_Martin_Codax ;
+              :acidity "6"^^xsd:positiveInteger ;
+              :body "4"^^xsd:positiveInteger ;
+              :price "9.9"^^xsd:float ;
+              :sparkling "false"^^xsd:boolean ;
+              :vintage "2021"^^xsd:positiveInteger ;
+              rdfs:comment "Albariño Marieta 2021" ;
+              rdfs:label "Marieta 2021" .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape
+:MerlotGrape rdf:type owl:NamedIndividual ,
+                      :MerlotGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape
+:MoscatelGrape rdf:type owl:NamedIndividual ,
+                        :MoscatelGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape
+:NebbioloGrape rdf:type owl:NamedIndividual ,
+                        :NebbioloGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape
+:ParelladaGrape rdf:type owl:NamedIndividual ,
+                         :ParelladaGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape
+:PinotMeunierGrape rdf:type owl:NamedIndividual ,
+                            :PinotMeunierGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape
+:PinotNoirGrape rdf:type owl:NamedIndividual ,
+                         :PinotNoirGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape
+:RieslingGrape rdf:type owl:NamedIndividual ,
+                        :RieslingGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape
+:SauvignonBlancGrape rdf:type owl:NamedIndividual ,
+                              :SauvignonBlancGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry
+:SpainCountry rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape
+:SyrahGrape rdf:type owl:NamedIndividual ,
+                     :SyrahGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape
+:TempranilloGrape rdf:type owl:NamedIndividual ,
+                           :TempranilloGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape
+:TrepatGrape rdf:type owl:NamedIndividual ,
+                      :TrepatGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape
+:VerdejoGrape rdf:type owl:NamedIndividual ,
+                       :VerdejoGrape .
+
+
+###  http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape
+:XarelloGrape rdf:type owl:NamedIndividual ,
+                       :XarelloGrape .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:AlbarinoGrape rdfs:comment "Albariño Grape" ;
+               rdfs:label "Albariño Grape" .
+
+
+:CabernetSauvignonGrape rdfs:comment "Cabernet Sauvignon Grape" ;
+                        rdfs:label "Cabernet Sauvignon Grape" .
+
+
+:CarignanGrape rdfs:comment "Carignan Grape" ;
+               rdfs:label "Carignan Grape" .
+
+
+:CarmenereGrape rdfs:comment "Carménère Grape" ;
+                rdfs:label "Carménère Grape" .
+
+
+:ChardonnayGrape rdfs:comment "Chardonnay Grape" ;
+                 rdfs:label "Chardonnay Grape" .
+
+
+:DOAbona rdfs:comment "DO Abona" ;
+         rdfs:label "DO Abona" .
+
+
+:DOAlella rdfs:comment "DO Alella" ;
+          rdfs:label "DO Alella" .
+
+
+:DOAlicante rdfs:comment "DO Alicante" ;
+            rdfs:label "DO Alicante" .
+
+
+:DOAlmansa rdfs:comment "DO Almansa" ;
+           rdfs:label "DO Almansa" .
+
+
+:DOArlanza rdfs:comment "DO Arlanza" ;
+           rdfs:label "DO Arlanza" .
+
+
+:DOArribes rdfs:comment "DO Arribes" ;
+           rdfs:label "DO Arribes" .
+
+
+:DOBierzo rdfs:comment "DO Bierzo" ;
+          rdfs:label "DO Bierzo" .
+
+
+:DOBinissalem rdfs:comment "DO Binissalem" ;
+              rdfs:label "DO Binissalem" .
+
+
+:DOBullas rdfs:comment "DO Bullas" ;
+          rdfs:label "DO Bullas" .
+
+
+:DOCalatayud rdfs:comment "DO Calatayud" ;
+             rdfs:label "DO Calatayud" .
+
+
+:DOCampoBorja rdfs:comment "DO Campo de Borja" ;
+              rdfs:label "DO Campo de Borja" .
+
+
+:DOCangas rdfs:comment "DO Cangas" ;
+          rdfs:label "DO Cangas" .
+
+
+:DOCarinena rdfs:comment "DO Cariñena" ;
+            rdfs:label "DO Cariñena" .
+
+
+:DOCataluna rdfs:comment "DO Cataluña" ;
+            rdfs:label "DO Cataluña" .
+
+
+:DOCava rdfs:comment "DO Cava" ;
+        rdfs:label "DO Cava" .
+
+
+:DOChacoliAlava rdfs:comment "DO Chacolí de Álava" ;
+                rdfs:label "DO Chacolí de Álava" .
+
+
+:DOChacoliBizkaia rdfs:comment "DO Chacolí de Bizkaia" ;
+                  rdfs:label "DO Chacolí de Bizkaia" .
+
+
+:DOChacoliGetaria rdfs:comment "DO Chacolí de Getaria" ;
+                  rdfs:label "DO Chacolí de Getaria" .
+
+
+:DOCigales rdfs:comment "DO Cigales" ;
+           rdfs:label "DO Cigales" .
+
+
+:DOConcaBarbera rdfs:comment "DO Conca de Barberà" ;
+                rdfs:label "DO Conca de Barberà" .
+
+
+:DOCondadoHuelva rdfs:comment "DO Condado de Huelva" ;
+                 rdfs:label "DO Condado de Huelva" .
+
+
+:DOCostersSegre rdfs:comment "DO Costers del Segre" ;
+                rdfs:label "DO Costers del Segre" .
+
+
+:DOElHierro rdfs:comment "DO El Hierro" ;
+            rdfs:label "DO El Hierro" .
+
+
+:DOEmporda rdfs:comment "DO Empordà" ;
+           rdfs:label "DO Empordà" .
+
+
+:DOGranCanaria rdfs:comment "DO Gran Canaria" ;
+               rdfs:label "DO Gran Canaria" .
+
+
+:DOJerezXeresSherry rdfs:comment "DO Jerez-Xeres-Sherry" ;
+                    rdfs:label "DO Jerez-Xeres-Sherry" .
+
+
+:DOJumilla rdfs:comment "DO Jumilla" ;
+           rdfs:label "DO Jumilla" .
+
+
+:DOLaGomera rdfs:comment "DO La Gomera" ;
+            rdfs:label "DO La Gomera" .
+
+
+:DOLaMancha rdfs:comment "DO La Mancha" ;
+            rdfs:label "DO La Mancha" .
+
+
+:DOLaPalma rdfs:comment "DO La Palma" ;
+           rdfs:label "DO La Palma" .
+
+
+:DOLanzarote rdfs:comment "DO Lanzarote" ;
+             rdfs:label "DO Lanzarote" .
+
+
+:DOLeon rdfs:comment "DO León" ;
+        rdfs:label "DO León" .
+
+
+:DOMalaga rdfs:comment "DO Málaga" ;
+          rdfs:label "DO Málaga" .
+
+
+:DOManchuela rdfs:comment "DO Manchuela" ;
+             rdfs:label "DO Manchuela" .
+
+
+:DOManzanillaSanlucarBarrameda rdfs:comment "DO Manzanilla Sanlucar de Barrameda" ;
+                               rdfs:label "DO Manzanilla Sanlucar de Barrameda" .
+
+
+:DOMentrida rdfs:comment "DO Méntrida" ;
+            rdfs:label "DO Méntrida" .
+
+
+:DOMondejar rdfs:comment "DO Mondejar" ;
+            rdfs:label "DO Mondejar" .
+
+
+:DOMonterrei rdfs:comment "DO Monterrei" ;
+             rdfs:label "DO Monterrei" .
+
+
+:DOMontillaMoriles rdfs:comment "DO Montilla-Moriles" ;
+                   rdfs:label "DO Montilla-Moriles" .
+
+
+:DOMontsant rdfs:comment "DO Montsant" ;
+            rdfs:label "DO Montsant" .
+
+
+:DONavarra rdfs:comment "DO Navarra" ;
+           rdfs:label "DO Navarra" .
+
+
+:DOPenedes rdfs:comment "DO Penedes" ;
+           rdfs:label "DO Penedes" .
+
+
+:DOPlaBages rdfs:comment "DO Pla de Bages" ;
+            rdfs:label "DO Pla de Bages" .
+
+
+:DOPlaLlevant rdfs:comment "DO Pla i Llevant" ;
+              rdfs:label "DO Pla i Llevant" .
+
+
+:DOPriorat rdfs:comment "DOCa Priorat" ;
+           rdfs:label "DOCa Priorat" .
+
+
+:DORiasBaixas rdfs:comment "DO Rias Baixas" ;
+              rdfs:label "DO Rias Baixas" .
+
+
+:DORibeiraSacra rdfs:comment "DO Ribeira Sacra" ;
+                rdfs:label "DO Ribeira Sacra" .
+
+
+:DORibeiro rdfs:comment "DO Ribeiro" ;
+           rdfs:label "DO Ribeiro" .
+
+
+:DORiberaDuero rdfs:comment "DO Ribera del Duero" ;
+               rdfs:label "DO Ribera del Duero" .
+
+
+:DORiberaGuadiana rdfs:comment "DO Ribera del Guadiana" ;
+                  rdfs:label "DO Ribera del Guadiana" .
+
+
+:DORiberaJucar rdfs:comment "DO Ribera del Júcar" ;
+               rdfs:label "DO Ribera del Júcar" .
+
+
+:DORioja rdfs:comment "DOCa Rioja" ;
+         rdfs:label "DOCa Rioja" .
+
+
+:DORueda rdfs:comment "DO Rueda" ;
+         rdfs:label "DO Rueda" .
+
+
+:DOSierrasMálaga rdfs:comment "DO Sierras de Malaga" ;
+                 rdfs:label "DO Sierras de Malaga" .
+
+
+:DOSomontano rdfs:comment "DO Somontano" ;
+             rdfs:label "DO Somontano" .
+
+
+:DOTacoronteAcentejo rdfs:comment "DO Tacoronte-Acentejo" ;
+                     rdfs:label "DO Tacoronte-Acentejo" .
+
+
+:DOTarragona rdfs:comment "DO Tarragona" ;
+             rdfs:label "DO Tarragona" .
+
+
+:DOTerraAlta rdfs:comment "DO Terra Alta" ;
+             rdfs:label "DO Terra Alta" .
+
+
+:DOTierraVinoZamora rdfs:comment "DO Tierra del Vino de Zamora" ;
+                    rdfs:label "DO Tierra del Vino de Zamora" .
+
+
+:DOToro rdfs:comment "DO Toro" ;
+        rdfs:label "DO Toro" .
+
+
+:DOUcles rdfs:comment "DO Ucles" ;
+         rdfs:label "DO Ucles" .
+
+
+:DOUtielRequena rdfs:comment "DO Utiel-Requena" ;
+                rdfs:label "DO Utiel-Requena" .
+
+
+:DOValdeorras rdfs:comment "DO Valdeorras" ;
+              rdfs:label "DO Valdeorras" .
+
+
+:DOValdepenas rdfs:comment "DO Valdepeñas" ;
+              rdfs:label "DO Valdepeñas" .
+
+
+:DOValencia rdfs:comment "DO Valencia" ;
+            rdfs:label "DO Valencia" .
+
+
+:DOValleGuimar rdfs:comment "DO Valle de Guimar" ;
+               rdfs:label "DO Valle de Guimar" .
+
+
+:DOValleOrotava rdfs:comment "DO Valle de la Orotava" ;
+                rdfs:label "DO Valle de la Orotava" .
+
+
+:DOVinosMadrid rdfs:comment "DO Vinos de Madrid" ;
+               rdfs:label "DO Vinos de Madrid" .
+
+
+:DOYcodenDauteIsora rdfs:comment "DO Ycoden-Daute-Isora" ;
+                    rdfs:label "DO Ycoden-Daute-Isora" .
+
+
+:DOYecla rdfs:comment "DO Yecla" ;
+         rdfs:label "DO Yecla" .
+
+
+:GarnachaGrape rdfs:comment "Garnacha Grape" ;
+               rdfs:label "Garnacha Grape" .
+
+
+:GewurztraminerGrape rdfs:comment "Gewürztraminer Grape" ;
+                     rdfs:label "Gewürztraminer Grape" .
+
+
+:MacabeoGrape rdfs:comment "Macabeo Grape" ;
+              rdfs:label "Macabeo Grape" .
+
+
+:MalbecGrape rdfs:comment "Malbec Grape" ;
+             rdfs:label "Malbec Grape" .
+
+
+:MerlotGrape rdfs:comment "Merlot Grape" ;
+             rdfs:label "Merlot Grape" .
+
+
+:MoscatelGrape rdfs:comment "Moscatel Grape" ;
+               rdfs:label "Moscatel Grape" .
+
+
+:NebbioloGrape rdfs:comment "Nebbiolo Grape" ;
+               rdfs:label "Nebbiolo Grape" .
+
+
+:ParelladaGrape rdfs:comment "Parellada Grape" ;
+                rdfs:label "Parellada Grape" .
+
+
+:PinotMeunierGrape rdfs:comment "Pinot Meunier Grape" ;
+                   rdfs:label "Pinot Meunier Grape" .
+
+
+:PinotNoirGrape rdfs:comment "Pinot Noir Grape" ;
+                rdfs:label "Pinot Noir Grape" .
+
+
+:RieslingGrape rdfs:comment "Riesling Grape" ;
+               rdfs:label "Riesling Grape" .
+
+
+:SauvignonBlancGrape rdfs:comment "Sauvignon Blanc Grape" ;
+                     rdfs:label "Sauvignon Blanc Grape" .
+
+
+:SyrahGrape rdfs:comment "Syrah Grape" ;
+            rdfs:label "Syrah Grape" .
+
+
+:TempranilloGrape rdfs:comment "Tempranillo Grape" ;
+                  rdfs:label "Tempranillo Grape" .
+
+
+:TrepatGrape rdfs:comment "Trepat Grape" ;
+             rdfs:label "Trepat Grape" .
+
+
+:VerdejoGrape rdfs:comment "Verdejo Grape" ;
+              rdfs:label "Verdejo Grape" .
+
+
+:XarelloGrape rdfs:comment "Xarel·lo Grape" ;
+              rdfs:label "Xarel·lo Grape" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
