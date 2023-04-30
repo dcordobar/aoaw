@@ -1,18 +1,20 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/dani/ontologies/aoaw/"
-     xml:base="http://www.semanticweb.org/dani/ontologies/aoaw/"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf"
+     xml:base="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:aoaw="http://www.semanticweb.org/dani/ontologies/aoaw#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:aoaw1="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#">
+     xmlns:aoaw="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf">
         <dc:creator>Daniel Córdoba Roldán</dc:creator>
         <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://creativecommons.org/licenses/by/4.0/</dc:rights>
         <dc:title>AOAW - An Ontology About Wine</dc:title>
+        <rdfs:comment>An Ontology About Wine
+
+In this ontology you can find information about types of wine, designation of origin, grape variety and wineries.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -75,6 +77,8 @@
         <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+        <rdfs:comment>Relates a designation of origin with a wine</rdfs:comment>
+        <rdfs:label>grantTo</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -84,6 +88,8 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
+        <rdfs:comment>Relates a wine with his designation of origin</rdfs:comment>
+        <rdfs:label>hasDesignationOrigin</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -93,6 +99,8 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasWinery">
         <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"/>
+        <rdfs:comment>Relates a country with the wineries located in it</rdfs:comment>
+        <rdfs:label>hasWinery</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -101,6 +109,8 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
+        <rdfs:comment>Indicates the country where the winery is located</rdfs:comment>
+        <rdfs:label>locatedAt</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -111,6 +121,8 @@
         <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#presentOn"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
+        <rdfs:comment>Indicates that a wine contains a certain grape variety</rdfs:comment>
+        <rdfs:label>madeFrom</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -120,6 +132,8 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#presentOn">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+        <rdfs:comment>Indicates that a grape variety is present in a wine</rdfs:comment>
+        <rdfs:label>presentOn</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -130,6 +144,8 @@
         <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#produces"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
+        <rdfs:comment>Relates a wine with his winery</rdfs:comment>
+        <rdfs:label>producedBy</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -139,6 +155,8 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#produces">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+        <rdfs:comment>Relates a winery with his own wines</rdfs:comment>
+        <rdfs:label>produces</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -159,6 +177,8 @@
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#acidity">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>Level of acidity of the wine</rdfs:comment>
+        <rdfs:label>acidity</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -168,6 +188,8 @@
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#body">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>Level of body of the wine</rdfs:comment>
+        <rdfs:label>body</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -177,6 +199,8 @@
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#price">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Price of the wine</rdfs:comment>
+        <rdfs:label>price</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -186,6 +210,8 @@
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#sparkling">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates if the wine is sparkling or not</rdfs:comment>
+        <rdfs:label>sparkling</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -195,6 +221,8 @@
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#vintage">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>Indicates de vintage of the wine</rdfs:comment>
+        <rdfs:label>vintage</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1139,7 +1167,7 @@
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
-        <aoaw1:locatedAt rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"/>
+        <aoaw:locatedAt rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"/>
         <rdfs:comment>Aalto es el emblemático nombre de una bodega que se ha convertido en un referente en la Ribera del Duero. La dilatada experiencia de Mariano García, quien fuera enólogo de Vega Sicilia durante treinta años, se siente en la fuerza y complejidad de los vinos.</rdfs:comment>
         <rdfs:label>Bodegas Aalto</rdfs:label>
     </owl:NamedIndividual>
@@ -1150,14 +1178,14 @@
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto_2020">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloWine"/>
-        <aoaw1:hasDesignationOrigin rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero"/>
-        <aoaw1:madeFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape"/>
-        <aoaw1:producedBy rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto"/>
-        <aoaw1:acidity rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">7</aoaw1:acidity>
-        <aoaw1:body rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">8</aoaw1:body>
-        <aoaw1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.95</aoaw1:price>
-        <aoaw1:sparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aoaw1:sparkling>
-        <aoaw1:vintage rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2020</aoaw1:vintage>
+        <aoaw:hasDesignationOrigin rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero"/>
+        <aoaw:madeFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape"/>
+        <aoaw:producedBy rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto"/>
+        <aoaw:acidity rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">7</aoaw:acidity>
+        <aoaw:body rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">8</aoaw:body>
+        <aoaw:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.95</aoaw:price>
+        <aoaw:sparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aoaw:sparkling>
+        <aoaw:vintage rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2020</aoaw:vintage>
         <rdfs:comment>Aalto es uno de los grandes referentes de Ribera del Duero, un vino de un gran equilibrio y complejidad, lleno de fuerza y personalidad, maduro y elegante, que debe sus virtudes a unas magníficas uvas de la variedad tinta fina (tempranillo), a una diversidad de suelos y a la vasta experiencia de Mariano García, el enólogo que durante treinta años fue el responsable de la elaboración de los vinos de Vega Sicilia. Desde siempre, ha sido uno de los mejores ejemplos de ribera moderno, convertido hoy en un clásico, un ribera esencial y un vino para las grandes ocasiones.</rdfs:comment>
         <rdfs:label>Aalto 2020</rdfs:label>
     </owl:NamedIndividual>
@@ -1176,8 +1204,8 @@
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Angel_Lorenzo_Cachazo">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
-        <aoaw1:locatedAt rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"/>
-        <rdfs:comment>Bodegas Ángel Lorenzo Cachazo</rdfs:comment>
+        <aoaw:locatedAt rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"/>
+        <rdfs:comment>Ángel Lorenzo Cachazo elabora vinos de calidad bajo la DO Rueda desde 1988 aunque su familia cuenta con una larga tradición vitivinícola, sus antepasados ya elaboraban vino en la antigua Tierra de Medina.</rdfs:comment>
         <rdfs:label>Ángel Lorenzo Cachazo</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1187,8 +1215,8 @@
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Bodegas_Martin_Codax">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
-        <aoaw1:locatedAt rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"/>
-        <rdfs:comment>Bodegas Martín Códax</rdfs:comment>
+        <aoaw:locatedAt rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"/>
+        <rdfs:comment>Fundada en 1986 y establecida en Cambados, capital del &quot;Val do Salnés&quot;, Bodegas Martín Códax es un destacado referente dentro de la denominación de origen &quot;Rías Baixas&quot; y, en especial, de la varietal albariño, la más célebre y cotizada variedad de la Denominación.</rdfs:comment>
         <rdfs:label>Bodegas Martín Códax</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1790,14 +1818,14 @@
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#El_Perro_Verde_2021">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoWine"/>
-        <aoaw1:hasDesignationOrigin rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda"/>
-        <aoaw1:madeFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape"/>
-        <aoaw1:producedBy rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Angel_Lorenzo_Cachazo"/>
-        <aoaw1:acidity rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">6</aoaw1:acidity>
-        <aoaw1:body rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</aoaw1:body>
-        <aoaw1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.9</aoaw1:price>
-        <aoaw1:sparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aoaw1:sparkling>
-        <aoaw1:vintage rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2021</aoaw1:vintage>
+        <aoaw:hasDesignationOrigin rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda"/>
+        <aoaw:madeFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape"/>
+        <aoaw:producedBy rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Angel_Lorenzo_Cachazo"/>
+        <aoaw:acidity rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">6</aoaw:acidity>
+        <aoaw:body rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</aoaw:body>
+        <aoaw:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.9</aoaw:price>
+        <aoaw:sparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aoaw:sparkling>
+        <aoaw:vintage rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2021</aoaw:vintage>
         <rdfs:comment>Verdejo El Perro Verde 2021</rdfs:comment>
         <rdfs:label>El Perro Verde 2021</rdfs:label>
     </owl:NamedIndividual>
@@ -1840,14 +1868,14 @@
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Marieta_2021">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoWine"/>
-        <aoaw1:hasDesignationOrigin rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas"/>
-        <aoaw1:madeFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape"/>
-        <aoaw1:producedBy rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Bodegas_Martin_Codax"/>
-        <aoaw1:acidity rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">6</aoaw1:acidity>
-        <aoaw1:body rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</aoaw1:body>
-        <aoaw1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.9</aoaw1:price>
-        <aoaw1:sparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aoaw1:sparkling>
-        <aoaw1:vintage rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2021</aoaw1:vintage>
+        <aoaw:hasDesignationOrigin rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas"/>
+        <aoaw:madeFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape"/>
+        <aoaw:producedBy rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Bodegas_Martin_Codax"/>
+        <aoaw:acidity rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">6</aoaw:acidity>
+        <aoaw:body rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</aoaw:body>
+        <aoaw:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.9</aoaw:price>
+        <aoaw:sparkling rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aoaw:sparkling>
+        <aoaw:vintage rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2021</aoaw:vintage>
         <rdfs:comment>Albariño Marieta 2021</rdfs:comment>
         <rdfs:label>Marieta 2021</rdfs:label>
     </owl:NamedIndividual>
