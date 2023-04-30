@@ -1,0 +1,395 @@
+{
+  "@context" : {
+    "DOArlanza" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza"
+    },
+    "DOBierzo" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo"
+    },
+    "MerlotGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape"
+    },
+    "DORiberaDuero" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero"
+    },
+    "RieslingGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape"
+    },
+    "DOLeon" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon"
+    },
+    "DOChacoliGetaria" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "ParelladaGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape"
+    },
+    "hasDesignationOrigin" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin",
+      "@type" : "@id"
+    },
+    "Winery" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"
+    },
+    "DOCigales" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales"
+    },
+    "DOMonterrei" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei"
+    },
+    "license" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#terms:license"
+    },
+    "SauvignonBlancGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape"
+    },
+    "Country" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"
+    },
+    "VerdejoGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape"
+    },
+    "DOLaMancha" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha"
+    },
+    "madeFrom" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#madeFrom",
+      "@type" : "@id"
+    },
+    "body" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#body",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "hasWinery" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasWinery",
+      "@type" : "@id"
+    },
+    "DOAlmansa" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa"
+    },
+    "DOMalaga" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga"
+    },
+    "presentOn" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#presentOn",
+      "@type" : "@id"
+    },
+    "DOLaPalma" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma"
+    },
+    "DOValleGuimar" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar"
+    },
+    "DOUcles" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles"
+    },
+    "DOGranCanaria" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria"
+    },
+    "producedBy" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy",
+      "@type" : "@id"
+    },
+    "AlbarinoWine" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoWine"
+    },
+    "DOLaGomera" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera"
+    },
+    "DOAlella" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella"
+    },
+    "DOValencia" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia"
+    },
+    "DOValdeorras" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "DOMondejar" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar"
+    },
+    "DOVinosMadrid" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid"
+    },
+    "DOMontsant" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant"
+    },
+    "DesignationOrigin" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+    },
+    "DORiberaGuadiana" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana"
+    },
+    "GarnachaGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape"
+    },
+    "DOPlaBages" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages"
+    },
+    "PinotNoirGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape"
+    },
+    "DOCostersSegre" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre"
+    },
+    "DOMontillaMoriles" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles"
+    },
+    "DORiasBaixas" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas"
+    },
+    "PinotMeunierGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape"
+    },
+    "TempranilloWine" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloWine"
+    },
+    "DOEmporda" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda"
+    },
+    "vintage" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#vintage",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "DOTarragona" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona"
+    },
+    "MacabeoGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape"
+    },
+    "DOUtielRequena" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena"
+    },
+    "DOToro" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "DOElHierro" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro"
+    },
+    "DOPlaLlevant" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant"
+    },
+    "DOCampoBorja" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja"
+    },
+    "DORibeiro" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro"
+    },
+    "DORioja" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja"
+    },
+    "DOAlicante" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante"
+    },
+    "MoscatelGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape"
+    },
+    "DOChacoliBizkaia" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia"
+    },
+    "locatedAt" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt",
+      "@type" : "@id"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
+    },
+    "DOLanzarote" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote"
+    },
+    "ID" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#ID"
+    },
+    "DOYecla" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla"
+    },
+    "DOYcodenDauteIsora" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora"
+    },
+    "DOMentrida" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida"
+    },
+    "DOManchuela" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela"
+    },
+    "DORibeiraSacra" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra"
+    },
+    "acidity" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#acidity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "GewurztraminerGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape"
+    },
+    "NebbioloGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape"
+    },
+    "DOSomontano" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano"
+    },
+    "DOArribes" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes"
+    },
+    "WhiteWine" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#WhiteWine"
+    },
+    "TempranilloGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape"
+    },
+    "DOConcaBarbera" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera"
+    },
+    "produces" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#produces",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "DONavarra" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra"
+    },
+    "AlbarinoGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape"
+    },
+    "RoseWine" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RoseWine"
+    },
+    "CabernetSauvignonGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape"
+    },
+    "DOJerezXeresSherry" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry"
+    },
+    "DOPenedes" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes"
+    },
+    "DOAbona" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona"
+    },
+    "DOTerraAlta" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta"
+    },
+    "DOCalatayud" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud"
+    },
+    "DOSierrasMálaga" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga"
+    },
+    "DOManzanillaSanlucarBarrameda" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda"
+    },
+    "ChardonnayGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape"
+    },
+    "DOCangas" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas"
+    },
+    "MalbecGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape"
+    },
+    "DOCondadoHuelva" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva"
+    },
+    "DOPriorat" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat"
+    },
+    "DOChacoliAlava" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava"
+    },
+    "DOValdepenas" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas"
+    },
+    "DOCarinena" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "VerdejoWine" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoWine"
+    },
+    "price" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#price",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "DOTacoronteAcentejo" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo"
+    },
+    "sparkling" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#sparkling",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "DOBullas" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas"
+    },
+    "DOCava" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava"
+    },
+    "DOBinissalem" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem"
+    },
+    "DOValleOrotava" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava"
+    },
+    "XarelloGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape"
+    },
+    "grantTo" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#grantTo",
+      "@type" : "@id"
+    },
+    "CarmenereGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape"
+    },
+    "TrepatGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape"
+    },
+    "SyrahGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "GrapeVariety" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+    },
+    "DOJumilla" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla"
+    },
+    "DOTierraVinoZamora" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora"
+    },
+    "CarignanGrape" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape"
+    },
+    "DORiberaJucar" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar"
+    },
+    "DORueda" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda"
+    },
+    "RedWine" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RedWine"
+    },
+    "Wine" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+    },
+    "DOCataluna" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna"
+    }
+  }
+}

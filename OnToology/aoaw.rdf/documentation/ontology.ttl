@@ -1,0 +1,1782 @@
+@prefix : <https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#> .
+
+<https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf> rdf:type owl:Ontology ;
+                                                                  <http://purl.org/dc/elements/1.1/creator> "Daniel Córdoba Roldán" ;
+                                                                  <http://purl.org/dc/elements/1.1/description> """An Ontology About Wine
+
+In this ontology you can find information about types of wine, designation of origin, grape variety and wineries.""" ;
+                                                                  <http://purl.org/dc/elements/1.1/rights> "http://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+                                                                  <http://purl.org/dc/elements/1.1/title> "AOAW - An Ontology About Wine" ;
+                                                                  owl:versionInfo "1.0.0" ;
+                                                                  :terms:license "https://creativecommons.org/licenses/by/4.0/" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#ID
+rdf:ID rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#terms:license
+:terms:license rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#grantTo
+:grantTo rdf:type owl:ObjectProperty ;
+         owl:inverseOf :hasDesignationOrigin ;
+         rdfs:domain :DesignationOrigin ;
+         rdfs:range :Wine ;
+         rdfs:comment "Relates a designation of origin with a wine" ;
+         rdfs:label "grantTo" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin
+:hasDesignationOrigin rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Wine ;
+                      rdfs:range :DesignationOrigin ;
+                      rdfs:comment "Relates a wine with his designation of origin" ;
+                      rdfs:label "hasDesignationOrigin" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasWinery
+:hasWinery rdf:type owl:ObjectProperty ;
+           owl:inverseOf :locatedAt ;
+           rdfs:domain :Country ;
+           rdfs:range :Winery ;
+           rdfs:comment "Relates a country with the wineries located in it" ;
+           rdfs:label "hasWinery" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt
+:locatedAt rdf:type owl:ObjectProperty ;
+           rdfs:domain :Winery ;
+           rdfs:range :Country ;
+           rdfs:comment "Indicates the country where the winery is located" ;
+           rdfs:label "locatedAt" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#madeFrom
+:madeFrom rdf:type owl:ObjectProperty ;
+          owl:inverseOf :presentOn ;
+          rdfs:domain :Wine ;
+          rdfs:range :GrapeVariety ;
+          rdfs:comment "Indicates that a wine contains a certain grape variety" ;
+          rdfs:label "madeFrom" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#presentOn
+:presentOn rdf:type owl:ObjectProperty ;
+           rdfs:domain :GrapeVariety ;
+           rdfs:range :Wine ;
+           rdfs:comment "Indicates that a grape variety is present in a wine" ;
+           rdfs:label "presentOn" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy
+:producedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :produces ;
+            rdfs:domain :Wine ;
+            rdfs:range :Winery ;
+            rdfs:comment "Relates a wine with his winery" ;
+            rdfs:label "producedBy" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#produces
+:produces rdf:type owl:ObjectProperty ;
+          rdfs:domain :Winery ;
+          rdfs:range :Wine ;
+          rdfs:comment "Relates a winery with his own wines" ;
+          rdfs:label "produces" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#acidity
+:acidity rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Wine ;
+         rdfs:range xsd:positiveInteger ;
+         rdfs:comment "Level of acidity of the wine" ;
+         rdfs:label "acidity" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#body
+:body rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Wine ;
+      rdfs:range xsd:positiveInteger ;
+      rdfs:comment "Level of body of the wine" ;
+      rdfs:label "body" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#price
+:price rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Wine ;
+       rdfs:range xsd:float ;
+       rdfs:comment "Price of the wine" ;
+       rdfs:label "price" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#sparkling
+:sparkling rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Wine ;
+           rdfs:range xsd:boolean ;
+           rdfs:comment "Indicates if the wine is sparkling or not" ;
+           rdfs:label "sparkling" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#vintage
+:vintage rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Wine ;
+         rdfs:range xsd:positiveInteger ;
+         rdfs:comment "Indicates de vintage of the wine" ;
+         rdfs:label "vintage" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape
+:AlbarinoGrape rdf:type owl:Class ;
+               rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoWine
+:AlbarinoWine rdf:type owl:Class ;
+              rdfs:subClassOf :WhiteWine ;
+              rdfs:comment "Albariño wine" ;
+              rdfs:label "Albariño wine" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape
+:CabernetSauvignonGrape rdf:type owl:Class ;
+                        rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape
+:CarignanGrape rdf:type owl:Class ;
+               rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape
+:CarmenereGrape rdf:type owl:Class ;
+                rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape
+:ChardonnayGrape rdf:type owl:Class ;
+                 rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country
+:Country rdf:type owl:Class ;
+         rdfs:comment "Contry" ;
+         rdfs:label "Contry" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona
+:DOAbona rdf:type owl:Class ;
+         rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella
+:DOAlella rdf:type owl:Class ;
+          rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante
+:DOAlicante rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa
+:DOAlmansa rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza
+:DOArlanza rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes
+:DOArribes rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo
+:DOBierzo rdf:type owl:Class ;
+          rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem
+:DOBinissalem rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas
+:DOBullas rdf:type owl:Class ;
+          rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud
+:DOCalatayud rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja
+:DOCampoBorja rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas
+:DOCangas rdf:type owl:Class ;
+          rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena
+:DOCarinena rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna
+:DOCataluna rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava
+:DOCava rdf:type owl:Class ;
+        rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava
+:DOChacoliAlava rdf:type owl:Class ;
+                rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia
+:DOChacoliBizkaia rdf:type owl:Class ;
+                  rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria
+:DOChacoliGetaria rdf:type owl:Class ;
+                  rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales
+:DOCigales rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera
+:DOConcaBarbera rdf:type owl:Class ;
+                rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva
+:DOCondadoHuelva rdf:type owl:Class ;
+                 rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre
+:DOCostersSegre rdf:type owl:Class ;
+                rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro
+:DOElHierro rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda
+:DOEmporda rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria
+:DOGranCanaria rdf:type owl:Class ;
+               rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry
+:DOJerezXeresSherry rdf:type owl:Class ;
+                    rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla
+:DOJumilla rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera
+:DOLaGomera rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha
+:DOLaMancha rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma
+:DOLaPalma rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote
+:DOLanzarote rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon
+:DOLeon rdf:type owl:Class ;
+        rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga
+:DOMalaga rdf:type owl:Class ;
+          rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela
+:DOManchuela rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda
+:DOManzanillaSanlucarBarrameda rdf:type owl:Class ;
+                               rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida
+:DOMentrida rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar
+:DOMondejar rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei
+:DOMonterrei rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles
+:DOMontillaMoriles rdf:type owl:Class ;
+                   rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant
+:DOMontsant rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra
+:DONavarra rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes
+:DOPenedes rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages
+:DOPlaBages rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant
+:DOPlaLlevant rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat
+:DOPriorat rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas
+:DORiasBaixas rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra
+:DORibeiraSacra rdf:type owl:Class ;
+                rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro
+:DORibeiro rdf:type owl:Class ;
+           rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero
+:DORiberaDuero rdf:type owl:Class ;
+               rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana
+:DORiberaGuadiana rdf:type owl:Class ;
+                  rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar
+:DORiberaJucar rdf:type owl:Class ;
+               rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja
+:DORioja rdf:type owl:Class ;
+         rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda
+:DORueda rdf:type owl:Class ;
+         rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga
+:DOSierrasMálaga rdf:type owl:Class ;
+                 rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano
+:DOSomontano rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo
+:DOTacoronteAcentejo rdf:type owl:Class ;
+                     rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona
+:DOTarragona rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta
+:DOTerraAlta rdf:type owl:Class ;
+             rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora
+:DOTierraVinoZamora rdf:type owl:Class ;
+                    rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro
+:DOToro rdf:type owl:Class ;
+        rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles
+:DOUcles rdf:type owl:Class ;
+         rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena
+:DOUtielRequena rdf:type owl:Class ;
+                rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras
+:DOValdeorras rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas
+:DOValdepenas rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia
+:DOValencia rdf:type owl:Class ;
+            rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar
+:DOValleGuimar rdf:type owl:Class ;
+               rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava
+:DOValleOrotava rdf:type owl:Class ;
+                rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid
+:DOVinosMadrid rdf:type owl:Class ;
+               rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora
+:DOYcodenDauteIsora rdf:type owl:Class ;
+                    rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla
+:DOYecla rdf:type owl:Class ;
+         rdfs:subClassOf :DesignationOrigin .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin
+:DesignationOrigin rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :grantTo ;
+                                     owl:someValuesFrom :Wine
+                                   ] ;
+                   rdfs:comment "Super  class for designations of origin" ;
+                   rdfs:label "Designation of Origin" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape
+:GarnachaGrape rdf:type owl:Class ;
+               rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape
+:GewurztraminerGrape rdf:type owl:Class ;
+                     rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety
+:GrapeVariety rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :presentOn ;
+                                owl:someValuesFrom :Wine
+                              ] ;
+              rdfs:comment "Super class for the different grape varieties" ;
+              rdfs:label "Grape Variety" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape
+:MacabeoGrape rdf:type owl:Class ;
+              rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape
+:MalbecGrape rdf:type owl:Class ;
+             rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape
+:MerlotGrape rdf:type owl:Class ;
+             rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape
+:MoscatelGrape rdf:type owl:Class ;
+               rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape
+:NebbioloGrape rdf:type owl:Class ;
+               rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape
+:ParelladaGrape rdf:type owl:Class ;
+                rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape
+:PinotMeunierGrape rdf:type owl:Class ;
+                   rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape
+:PinotNoirGrape rdf:type owl:Class ;
+                rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RedWine
+:RedWine rdf:type owl:Class ;
+         rdfs:subClassOf :Wine ;
+         rdfs:comment "Red wine" ;
+         rdfs:label "Red Wine" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape
+:RieslingGrape rdf:type owl:Class ;
+               rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RoseWine
+:RoseWine rdf:type owl:Class ;
+          rdfs:subClassOf :Wine ;
+          rdfs:comment "Rose wine" ;
+          rdfs:label "Rose Wine" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape
+:SauvignonBlancGrape rdf:type owl:Class ;
+                     rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape
+:SyrahGrape rdf:type owl:Class ;
+            rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape
+:TempranilloGrape rdf:type owl:Class ;
+                  rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloWine
+:TempranilloWine rdf:type owl:Class ;
+                 rdfs:subClassOf :RedWine ;
+                 rdfs:comment "Tempranillo wine" ;
+                 rdfs:label "Templanillo Wine" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape
+:TrepatGrape rdf:type owl:Class ;
+             rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape
+:VerdejoGrape rdf:type owl:Class ;
+              rdfs:subClassOf :GrapeVariety .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoWine
+:VerdejoWine rdf:type owl:Class ;
+             rdfs:subClassOf :WhiteWine ;
+             rdfs:comment "Verdejo wine" ;
+             rdfs:label "Verdejo wine" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#WhiteWine
+:WhiteWine rdf:type owl:Class ;
+           rdfs:subClassOf :Wine ;
+           rdfs:comment "White wine" ;
+           rdfs:label "White Wine" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine
+:Wine rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :madeFrom ;
+                        owl:someValuesFrom :GrapeVariety
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasDesignationOrigin ;
+                        owl:allValuesFrom :DesignationOrigin
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :producedBy ;
+                        owl:allValuesFrom :Winery
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :producedBy ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Winery
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasDesignationOrigin ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :DesignationOrigin
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :acidity ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:positiveInteger
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :body ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:positiveInteger
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :price ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:float
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :sparkling ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:boolean
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :vintage ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:positiveInteger
+                      ] ;
+      rdfs:comment "Super class for the different types of wine" ;
+      rdfs:label "Wine" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery
+:Winery rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :produces ;
+                          owl:someValuesFrom :Wine
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :locatedAt ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Country
+                        ] ;
+        rdfs:comment "Class that represents a winery" ;
+        rdfs:label "Winery" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape
+:XarelloGrape rdf:type owl:Class ;
+              rdfs:subClassOf :GrapeVariety .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto
+:Aalto rdf:type owl:NamedIndividual ,
+                :Winery ;
+       :locatedAt :SpainCountry ;
+       rdfs:comment "Aalto es el emblemático nombre de una bodega que se ha convertido en un referente en la Ribera del Duero. La dilatada experiencia de Mariano García, quien fuera enólogo de Vega Sicilia durante treinta años, se siente en la fuerza y complejidad de los vinos." ;
+       rdfs:label "Bodegas Aalto" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto_2020
+:Aalto_2020 rdf:type owl:NamedIndividual ,
+                     :TempranilloWine ;
+            :hasDesignationOrigin :DORiberaDuero ;
+            :madeFrom :TempranilloGrape ;
+            :producedBy :Aalto ;
+            :acidity "7"^^xsd:positiveInteger ;
+            :body "8"^^xsd:positiveInteger ;
+            :price "36.95"^^xsd:float ;
+            :sparkling "false"^^xsd:boolean ;
+            :vintage "2020"^^xsd:positiveInteger ;
+            rdfs:comment "Aalto es uno de los grandes referentes de Ribera del Duero, un vino de un gran equilibrio y complejidad, lleno de fuerza y personalidad, maduro y elegante, que debe sus virtudes a unas magníficas uvas de la variedad tinta fina (tempranillo), a una diversidad de suelos y a la vasta experiencia de Mariano García, el enólogo que durante treinta años fue el responsable de la elaboración de los vinos de Vega Sicilia. Desde siempre, ha sido uno de los mejores ejemplos de ribera moderno, convertido hoy en un clásico, un ribera esencial y un vino para las grandes ocasiones." ;
+            rdfs:label "Aalto 2020" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape
+:AlbarinoGrape rdf:type owl:NamedIndividual ,
+                        :AlbarinoGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Angel_Lorenzo_Cachazo
+:Angel_Lorenzo_Cachazo rdf:type owl:NamedIndividual ,
+                                :Winery ;
+                       :locatedAt :SpainCountry ;
+                       rdfs:comment "Ángel Lorenzo Cachazo elabora vinos de calidad bajo la DO Rueda desde 1988 aunque su familia cuenta con una larga tradición vitivinícola, sus antepasados ya elaboraban vino en la antigua Tierra de Medina." ;
+                       rdfs:label "Ángel Lorenzo Cachazo" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Bodegas_Martin_Codax
+:Bodegas_Martin_Codax rdf:type owl:NamedIndividual ,
+                               :Winery ;
+                      :locatedAt :SpainCountry ;
+                      rdfs:comment "Fundada en 1986 y establecida en Cambados, capital del \"Val do Salnés\", Bodegas Martín Códax es un destacado referente dentro de la denominación de origen \"Rías Baixas\" y, en especial, de la varietal albariño, la más célebre y cotizada variedad de la Denominación." ;
+                      rdfs:label "Bodegas Martín Códax" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape
+:CabernetSauvignonGrape rdf:type owl:NamedIndividual ,
+                                 :CabernetSauvignonGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape
+:CarignanGrape rdf:type owl:NamedIndividual ,
+                        :CarignanGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape
+:CarmenereGrape rdf:type owl:NamedIndividual ,
+                         :CarmenereGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape
+:ChardonnayGrape rdf:type owl:NamedIndividual ,
+                          :ChardonnayGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona
+:DOAbona rdf:type owl:NamedIndividual ,
+                  :DOAbona .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella
+:DOAlella rdf:type owl:NamedIndividual ,
+                   :DOAlella .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante
+:DOAlicante rdf:type owl:NamedIndividual ,
+                     :DOAlicante .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa
+:DOAlmansa rdf:type owl:NamedIndividual ,
+                    :DOAlmansa .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza
+:DOArlanza rdf:type owl:NamedIndividual ,
+                    :DOArlanza .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes
+:DOArribes rdf:type owl:NamedIndividual ,
+                    :DOArribes .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo
+:DOBierzo rdf:type owl:NamedIndividual ,
+                   :DOBierzo .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem
+:DOBinissalem rdf:type owl:NamedIndividual ,
+                       :DOBinissalem .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas
+:DOBullas rdf:type owl:NamedIndividual ,
+                   :DOBullas .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud
+:DOCalatayud rdf:type owl:NamedIndividual ,
+                      :DOCalatayud .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja
+:DOCampoBorja rdf:type owl:NamedIndividual ,
+                       :DOCampoBorja .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas
+:DOCangas rdf:type owl:NamedIndividual ,
+                   :DOCangas .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena
+:DOCarinena rdf:type owl:NamedIndividual ,
+                     :DOCarinena .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna
+:DOCataluna rdf:type owl:NamedIndividual ,
+                     :DOCataluna .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava
+:DOCava rdf:type owl:NamedIndividual ,
+                 :DOCava .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava
+:DOChacoliAlava rdf:type owl:NamedIndividual ,
+                         :DOChacoliAlava .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia
+:DOChacoliBizkaia rdf:type owl:NamedIndividual ,
+                           :DOChacoliBizkaia .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria
+:DOChacoliGetaria rdf:type owl:NamedIndividual ,
+                           :DOChacoliGetaria .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales
+:DOCigales rdf:type owl:NamedIndividual ,
+                    :DOCigales .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera
+:DOConcaBarbera rdf:type owl:NamedIndividual ,
+                         :DOConcaBarbera .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva
+:DOCondadoHuelva rdf:type owl:NamedIndividual ,
+                          :DOCondadoHuelva .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre
+:DOCostersSegre rdf:type owl:NamedIndividual ,
+                         :DOCostersSegre .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro
+:DOElHierro rdf:type owl:NamedIndividual ,
+                     :DOElHierro .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda
+:DOEmporda rdf:type owl:NamedIndividual ,
+                    :DOEmporda .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria
+:DOGranCanaria rdf:type owl:NamedIndividual ,
+                        :DOGranCanaria .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry
+:DOJerezXeresSherry rdf:type owl:NamedIndividual ,
+                             :DOJerezXeresSherry .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla
+:DOJumilla rdf:type owl:NamedIndividual ,
+                    :DOJumilla .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera
+:DOLaGomera rdf:type owl:NamedIndividual ,
+                     :DOLaGomera .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha
+:DOLaMancha rdf:type owl:NamedIndividual ,
+                     :DOLaMancha .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma
+:DOLaPalma rdf:type owl:NamedIndividual ,
+                    :DOLaPalma .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote
+:DOLanzarote rdf:type owl:NamedIndividual ,
+                      :DOLanzarote .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon
+:DOLeon rdf:type owl:NamedIndividual ,
+                 :DOLeon .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga
+:DOMalaga rdf:type owl:NamedIndividual ,
+                   :DOMalaga .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela
+:DOManchuela rdf:type owl:NamedIndividual ,
+                      :DOManchuela .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda
+:DOManzanillaSanlucarBarrameda rdf:type owl:NamedIndividual ,
+                                        :DOManzanillaSanlucarBarrameda .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida
+:DOMentrida rdf:type owl:NamedIndividual ,
+                     :DOMentrida .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar
+:DOMondejar rdf:type owl:NamedIndividual ,
+                     :DOMondejar .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei
+:DOMonterrei rdf:type owl:NamedIndividual ,
+                      :DOMonterrei .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles
+:DOMontillaMoriles rdf:type owl:NamedIndividual ,
+                            :DOMontillaMoriles .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant
+:DOMontsant rdf:type owl:NamedIndividual ,
+                     :DOMontsant .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra
+:DONavarra rdf:type owl:NamedIndividual ,
+                    :DONavarra .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes
+:DOPenedes rdf:type owl:NamedIndividual ,
+                    :DOPenedes .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages
+:DOPlaBages rdf:type owl:NamedIndividual ,
+                     :DOPlaBages .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant
+:DOPlaLlevant rdf:type owl:NamedIndividual ,
+                       :DOPlaLlevant .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat
+:DOPriorat rdf:type owl:NamedIndividual ,
+                    :DOPriorat .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas
+:DORiasBaixas rdf:type owl:NamedIndividual ,
+                       :DORiasBaixas .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra
+:DORibeiraSacra rdf:type owl:NamedIndividual ,
+                         :DORibeiraSacra .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro
+:DORibeiro rdf:type owl:NamedIndividual ,
+                    :DORibeiro .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero
+:DORiberaDuero rdf:type owl:NamedIndividual ,
+                        :DORiberaDuero .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana
+:DORiberaGuadiana rdf:type owl:NamedIndividual ,
+                           :DORiberaGuadiana .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar
+:DORiberaJucar rdf:type owl:NamedIndividual ,
+                        :DORiberaJucar .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja
+:DORioja rdf:type owl:NamedIndividual ,
+                  :DORioja .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda
+:DORueda rdf:type owl:NamedIndividual ,
+                  :DORueda .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga
+:DOSierrasMálaga rdf:type owl:NamedIndividual ,
+                          :DOSierrasMálaga .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano
+:DOSomontano rdf:type owl:NamedIndividual ,
+                      :DOSomontano .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo
+:DOTacoronteAcentejo rdf:type owl:NamedIndividual ,
+                              :DOTacoronteAcentejo .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona
+:DOTarragona rdf:type owl:NamedIndividual ,
+                      :DOTarragona .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta
+:DOTerraAlta rdf:type owl:NamedIndividual ,
+                      :DOTerraAlta .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora
+:DOTierraVinoZamora rdf:type owl:NamedIndividual ,
+                             :DOTierraVinoZamora .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro
+:DOToro rdf:type owl:NamedIndividual ,
+                 :DOToro .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles
+:DOUcles rdf:type owl:NamedIndividual ,
+                  :DOUcles .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena
+:DOUtielRequena rdf:type owl:NamedIndividual ,
+                         :DOUtielRequena .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras
+:DOValdeorras rdf:type owl:NamedIndividual ,
+                       :DOValdeorras .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas
+:DOValdepenas rdf:type owl:NamedIndividual ,
+                       :DOValdepenas .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia
+:DOValencia rdf:type owl:NamedIndividual ,
+                     :DOValencia .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar
+:DOValleGuimar rdf:type owl:NamedIndividual ,
+                        :DOValleGuimar .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava
+:DOValleOrotava rdf:type owl:NamedIndividual ,
+                         :DOValleOrotava .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid
+:DOVinosMadrid rdf:type owl:NamedIndividual ,
+                        :DOVinosMadrid .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora
+:DOYcodenDauteIsora rdf:type owl:NamedIndividual ,
+                             :DOYcodenDauteIsora .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla
+:DOYecla rdf:type owl:NamedIndividual ,
+                  :DOYecla .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#El_Perro_Verde_2021
+:El_Perro_Verde_2021 rdf:type owl:NamedIndividual ,
+                              :VerdejoWine ;
+                     :hasDesignationOrigin :DORueda ;
+                     :madeFrom :VerdejoGrape ;
+                     :producedBy :Angel_Lorenzo_Cachazo ;
+                     :acidity "6"^^xsd:positiveInteger ;
+                     :body "4"^^xsd:positiveInteger ;
+                     :price "10.9"^^xsd:float ;
+                     :sparkling "false"^^xsd:boolean ;
+                     :vintage "2021"^^xsd:positiveInteger ;
+                     rdfs:comment "Verdejo El Perro Verde 2021" ;
+                     rdfs:label "El Perro Verde 2021" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape
+:GarnachaGrape rdf:type owl:NamedIndividual ,
+                        :GarnachaGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape
+:GewurztraminerGrape rdf:type owl:NamedIndividual ,
+                              :GewurztraminerGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape
+:MacabeoGrape rdf:type owl:NamedIndividual ,
+                       :MacabeoGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape
+:MalbecGrape rdf:type owl:NamedIndividual ,
+                      :MalbecGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Marieta_2021
+:Marieta_2021 rdf:type owl:NamedIndividual ,
+                       :AlbarinoWine ;
+              :hasDesignationOrigin :DORiasBaixas ;
+              :madeFrom :AlbarinoGrape ;
+              :producedBy :Bodegas_Martin_Codax ;
+              :acidity "6"^^xsd:positiveInteger ;
+              :body "4"^^xsd:positiveInteger ;
+              :price "9.9"^^xsd:float ;
+              :sparkling "false"^^xsd:boolean ;
+              :vintage "2021"^^xsd:positiveInteger ;
+              rdfs:comment "Albariño Marieta 2021" ;
+              rdfs:label "Marieta 2021" .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape
+:MerlotGrape rdf:type owl:NamedIndividual ,
+                      :MerlotGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape
+:MoscatelGrape rdf:type owl:NamedIndividual ,
+                        :MoscatelGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape
+:NebbioloGrape rdf:type owl:NamedIndividual ,
+                        :NebbioloGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape
+:ParelladaGrape rdf:type owl:NamedIndividual ,
+                         :ParelladaGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape
+:PinotMeunierGrape rdf:type owl:NamedIndividual ,
+                            :PinotMeunierGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape
+:PinotNoirGrape rdf:type owl:NamedIndividual ,
+                         :PinotNoirGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape
+:RieslingGrape rdf:type owl:NamedIndividual ,
+                        :RieslingGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape
+:SauvignonBlancGrape rdf:type owl:NamedIndividual ,
+                              :SauvignonBlancGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry
+:SpainCountry rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape
+:SyrahGrape rdf:type owl:NamedIndividual ,
+                     :SyrahGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape
+:TempranilloGrape rdf:type owl:NamedIndividual ,
+                           :TempranilloGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape
+:TrepatGrape rdf:type owl:NamedIndividual ,
+                      :TrepatGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape
+:VerdejoGrape rdf:type owl:NamedIndividual ,
+                       :VerdejoGrape .
+
+
+###  https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape
+:XarelloGrape rdf:type owl:NamedIndividual ,
+                       :XarelloGrape .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:AlbarinoGrape rdfs:comment "Albariño Grape" ;
+               rdfs:label "Albariño Grape" .
+
+
+:CabernetSauvignonGrape rdfs:comment "Cabernet Sauvignon Grape" ;
+                        rdfs:label "Cabernet Sauvignon Grape" .
+
+
+:CarignanGrape rdfs:comment "Carignan Grape" ;
+               rdfs:label "Carignan Grape" .
+
+
+:CarmenereGrape rdfs:comment "Carménère Grape" ;
+                rdfs:label "Carménère Grape" .
+
+
+:ChardonnayGrape rdfs:comment "Chardonnay Grape" ;
+                 rdfs:label "Chardonnay Grape" .
+
+
+:DOAbona rdfs:comment "DO Abona" ;
+         rdfs:label "DO Abona" .
+
+
+:DOAlella rdfs:comment "DO Alella" ;
+          rdfs:label "DO Alella" .
+
+
+:DOAlicante rdfs:comment "DO Alicante" ;
+            rdfs:label "DO Alicante" .
+
+
+:DOAlmansa rdfs:comment "DO Almansa" ;
+           rdfs:label "DO Almansa" .
+
+
+:DOArlanza rdfs:comment "DO Arlanza" ;
+           rdfs:label "DO Arlanza" .
+
+
+:DOArribes rdfs:comment "DO Arribes" ;
+           rdfs:label "DO Arribes" .
+
+
+:DOBierzo rdfs:comment "DO Bierzo" ;
+          rdfs:label "DO Bierzo" .
+
+
+:DOBinissalem rdfs:comment "DO Binissalem" ;
+              rdfs:label "DO Binissalem" .
+
+
+:DOBullas rdfs:comment "DO Bullas" ;
+          rdfs:label "DO Bullas" .
+
+
+:DOCalatayud rdfs:comment "DO Calatayud" ;
+             rdfs:label "DO Calatayud" .
+
+
+:DOCampoBorja rdfs:comment "DO Campo de Borja" ;
+              rdfs:label "DO Campo de Borja" .
+
+
+:DOCangas rdfs:comment "DO Cangas" ;
+          rdfs:label "DO Cangas" .
+
+
+:DOCarinena rdfs:comment "DO Cariñena" ;
+            rdfs:label "DO Cariñena" .
+
+
+:DOCataluna rdfs:comment "DO Cataluña" ;
+            rdfs:label "DO Cataluña" .
+
+
+:DOCava rdfs:comment "DO Cava" ;
+        rdfs:label "DO Cava" .
+
+
+:DOChacoliAlava rdfs:comment "DO Chacolí de Álava" ;
+                rdfs:label "DO Chacolí de Álava" .
+
+
+:DOChacoliBizkaia rdfs:comment "DO Chacolí de Bizkaia" ;
+                  rdfs:label "DO Chacolí de Bizkaia" .
+
+
+:DOChacoliGetaria rdfs:comment "DO Chacolí de Getaria" ;
+                  rdfs:label "DO Chacolí de Getaria" .
+
+
+:DOCigales rdfs:comment "DO Cigales" ;
+           rdfs:label "DO Cigales" .
+
+
+:DOConcaBarbera rdfs:comment "DO Conca de Barberà" ;
+                rdfs:label "DO Conca de Barberà" .
+
+
+:DOCondadoHuelva rdfs:comment "DO Condado de Huelva" ;
+                 rdfs:label "DO Condado de Huelva" .
+
+
+:DOCostersSegre rdfs:comment "DO Costers del Segre" ;
+                rdfs:label "DO Costers del Segre" .
+
+
+:DOElHierro rdfs:comment "DO El Hierro" ;
+            rdfs:label "DO El Hierro" .
+
+
+:DOEmporda rdfs:comment "DO Empordà" ;
+           rdfs:label "DO Empordà" .
+
+
+:DOGranCanaria rdfs:comment "DO Gran Canaria" ;
+               rdfs:label "DO Gran Canaria" .
+
+
+:DOJerezXeresSherry rdfs:comment "DO Jerez-Xeres-Sherry" ;
+                    rdfs:label "DO Jerez-Xeres-Sherry" .
+
+
+:DOJumilla rdfs:comment "DO Jumilla" ;
+           rdfs:label "DO Jumilla" .
+
+
+:DOLaGomera rdfs:comment "DO La Gomera" ;
+            rdfs:label "DO La Gomera" .
+
+
+:DOLaMancha rdfs:comment "DO La Mancha" ;
+            rdfs:label "DO La Mancha" .
+
+
+:DOLaPalma rdfs:comment "DO La Palma" ;
+           rdfs:label "DO La Palma" .
+
+
+:DOLanzarote rdfs:comment "DO Lanzarote" ;
+             rdfs:label "DO Lanzarote" .
+
+
+:DOLeon rdfs:comment "DO León" ;
+        rdfs:label "DO León" .
+
+
+:DOMalaga rdfs:comment "DO Málaga" ;
+          rdfs:label "DO Málaga" .
+
+
+:DOManchuela rdfs:comment "DO Manchuela" ;
+             rdfs:label "DO Manchuela" .
+
+
+:DOManzanillaSanlucarBarrameda rdfs:comment "DO Manzanilla Sanlucar de Barrameda" ;
+                               rdfs:label "DO Manzanilla Sanlucar de Barrameda" .
+
+
+:DOMentrida rdfs:comment "DO Méntrida" ;
+            rdfs:label "DO Méntrida" .
+
+
+:DOMondejar rdfs:comment "DO Mondejar" ;
+            rdfs:label "DO Mondejar" .
+
+
+:DOMonterrei rdfs:comment "DO Monterrei" ;
+             rdfs:label "DO Monterrei" .
+
+
+:DOMontillaMoriles rdfs:comment "DO Montilla-Moriles" ;
+                   rdfs:label "DO Montilla-Moriles" .
+
+
+:DOMontsant rdfs:comment "DO Montsant" ;
+            rdfs:label "DO Montsant" .
+
+
+:DONavarra rdfs:comment "DO Navarra" ;
+           rdfs:label "DO Navarra" .
+
+
+:DOPenedes rdfs:comment "DO Penedes" ;
+           rdfs:label "DO Penedes" .
+
+
+:DOPlaBages rdfs:comment "DO Pla de Bages" ;
+            rdfs:label "DO Pla de Bages" .
+
+
+:DOPlaLlevant rdfs:comment "DO Pla i Llevant" ;
+              rdfs:label "DO Pla i Llevant" .
+
+
+:DOPriorat rdfs:comment "DOCa Priorat" ;
+           rdfs:label "DOCa Priorat" .
+
+
+:DORiasBaixas rdfs:comment "DO Rias Baixas" ;
+              rdfs:label "DO Rias Baixas" .
+
+
+:DORibeiraSacra rdfs:comment "DO Ribeira Sacra" ;
+                rdfs:label "DO Ribeira Sacra" .
+
+
+:DORibeiro rdfs:comment "DO Ribeiro" ;
+           rdfs:label "DO Ribeiro" .
+
+
+:DORiberaDuero rdfs:comment "DO Ribera del Duero" ;
+               rdfs:label "DO Ribera del Duero" .
+
+
+:DORiberaGuadiana rdfs:comment "DO Ribera del Guadiana" ;
+                  rdfs:label "DO Ribera del Guadiana" .
+
+
+:DORiberaJucar rdfs:comment "DO Ribera del Júcar" ;
+               rdfs:label "DO Ribera del Júcar" .
+
+
+:DORioja rdfs:comment "DOCa Rioja" ;
+         rdfs:label "DOCa Rioja" .
+
+
+:DORueda rdfs:comment "DO Rueda" ;
+         rdfs:label "DO Rueda" .
+
+
+:DOSierrasMálaga rdfs:comment "DO Sierras de Malaga" ;
+                 rdfs:label "DO Sierras de Malaga" .
+
+
+:DOSomontano rdfs:comment "DO Somontano" ;
+             rdfs:label "DO Somontano" .
+
+
+:DOTacoronteAcentejo rdfs:comment "DO Tacoronte-Acentejo" ;
+                     rdfs:label "DO Tacoronte-Acentejo" .
+
+
+:DOTarragona rdfs:comment "DO Tarragona" ;
+             rdfs:label "DO Tarragona" .
+
+
+:DOTerraAlta rdfs:comment "DO Terra Alta" ;
+             rdfs:label "DO Terra Alta" .
+
+
+:DOTierraVinoZamora rdfs:comment "DO Tierra del Vino de Zamora" ;
+                    rdfs:label "DO Tierra del Vino de Zamora" .
+
+
+:DOToro rdfs:comment "DO Toro" ;
+        rdfs:label "DO Toro" .
+
+
+:DOUcles rdfs:comment "DO Ucles" ;
+         rdfs:label "DO Ucles" .
+
+
+:DOUtielRequena rdfs:comment "DO Utiel-Requena" ;
+                rdfs:label "DO Utiel-Requena" .
+
+
+:DOValdeorras rdfs:comment "DO Valdeorras" ;
+              rdfs:label "DO Valdeorras" .
+
+
+:DOValdepenas rdfs:comment "DO Valdepeñas" ;
+              rdfs:label "DO Valdepeñas" .
+
+
+:DOValencia rdfs:comment "DO Valencia" ;
+            rdfs:label "DO Valencia" .
+
+
+:DOValleGuimar rdfs:comment "DO Valle de Guimar" ;
+               rdfs:label "DO Valle de Guimar" .
+
+
+:DOValleOrotava rdfs:comment "DO Valle de la Orotava" ;
+                rdfs:label "DO Valle de la Orotava" .
+
+
+:DOVinosMadrid rdfs:comment "DO Vinos de Madrid" ;
+               rdfs:label "DO Vinos de Madrid" .
+
+
+:DOYcodenDauteIsora rdfs:comment "DO Ycoden-Daute-Isora" ;
+                    rdfs:label "DO Ycoden-Daute-Isora" .
+
+
+:DOYecla rdfs:comment "DO Yecla" ;
+         rdfs:label "DO Yecla" .
+
+
+:GarnachaGrape rdfs:comment "Garnacha Grape" ;
+               rdfs:label "Garnacha Grape" .
+
+
+:GewurztraminerGrape rdfs:comment "Gewürztraminer Grape" ;
+                     rdfs:label "Gewürztraminer Grape" .
+
+
+:MacabeoGrape rdfs:comment "Macabeo Grape" ;
+              rdfs:label "Macabeo Grape" .
+
+
+:MalbecGrape rdfs:comment "Malbec Grape" ;
+             rdfs:label "Malbec Grape" .
+
+
+:MerlotGrape rdfs:comment "Merlot Grape" ;
+             rdfs:label "Merlot Grape" .
+
+
+:MoscatelGrape rdfs:comment "Moscatel Grape" ;
+               rdfs:label "Moscatel Grape" .
+
+
+:NebbioloGrape rdfs:comment "Nebbiolo Grape" ;
+               rdfs:label "Nebbiolo Grape" .
+
+
+:ParelladaGrape rdfs:comment "Parellada Grape" ;
+                rdfs:label "Parellada Grape" .
+
+
+:PinotMeunierGrape rdfs:comment "Pinot Meunier Grape" ;
+                   rdfs:label "Pinot Meunier Grape" .
+
+
+:PinotNoirGrape rdfs:comment "Pinot Noir Grape" ;
+                rdfs:label "Pinot Noir Grape" .
+
+
+:RieslingGrape rdfs:comment "Riesling Grape" ;
+               rdfs:label "Riesling Grape" .
+
+
+:SauvignonBlancGrape rdfs:comment "Sauvignon Blanc Grape" ;
+                     rdfs:label "Sauvignon Blanc Grape" .
+
+
+:SyrahGrape rdfs:comment "Syrah Grape" ;
+            rdfs:label "Syrah Grape" .
+
+
+:TempranilloGrape rdfs:comment "Tempranillo Grape" ;
+                  rdfs:label "Tempranillo Grape" .
+
+
+:TrepatGrape rdfs:comment "Trepat Grape" ;
+             rdfs:label "Trepat Grape" .
+
+
+:VerdejoGrape rdfs:comment "Verdejo Grape" ;
+              rdfs:label "Verdejo Grape" .
+
+
+:XarelloGrape rdfs:comment "Xarel·lo Grape" ;
+              rdfs:label "Xarel·lo Grape" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AlbarinoGrape
+                :CabernetSauvignonGrape
+                :CarignanGrape
+                :CarmenereGrape
+                :ChardonnayGrape
+                :GarnachaGrape
+                :GewurztraminerGrape
+                :MacabeoGrape
+                :MalbecGrape
+                :MerlotGrape
+                :MoscatelGrape
+                :NebbioloGrape
+                :ParelladaGrape
+                :PinotMeunierGrape
+                :PinotNoirGrape
+                :RieslingGrape
+                :SauvignonBlancGrape
+                :SyrahGrape
+                :TempranilloGrape
+                :TrepatGrape
+                :VerdejoGrape
+                :XarelloGrape
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DOAbona
+                :DOAlella
+                :DOAlicante
+                :DOAlmansa
+                :DOArlanza
+                :DOArribes
+                :DOBierzo
+                :DOBinissalem
+                :DOBullas
+                :DOCalatayud
+                :DOCampoBorja
+                :DOCangas
+                :DOCarinena
+                :DOCataluna
+                :DOCava
+                :DOChacoliAlava
+                :DOChacoliBizkaia
+                :DOChacoliGetaria
+                :DOCigales
+                :DOConcaBarbera
+                :DOCondadoHuelva
+                :DOCostersSegre
+                :DOElHierro
+                :DOEmporda
+                :DOGranCanaria
+                :DOJerezXeresSherry
+                :DOJumilla
+                :DOLaGomera
+                :DOLaMancha
+                :DOLaPalma
+                :DOLanzarote
+                :DOLeon
+                :DOMalaga
+                :DOManchuela
+                :DOManzanillaSanlucarBarrameda
+                :DOMentrida
+                :DOMondejar
+                :DOMonterrei
+                :DOMontillaMoriles
+                :DOMontsant
+                :DONavarra
+                :DOPenedes
+                :DOPlaBages
+                :DOPlaLlevant
+                :DOPriorat
+                :DORiasBaixas
+                :DORibeiraSacra
+                :DORibeiro
+                :DORiberaDuero
+                :DORiberaGuadiana
+                :DORiberaJucar
+                :DORioja
+                :DORueda
+                :DOSierrasMálaga
+                :DOSomontano
+                :DOTacoronteAcentejo
+                :DOTarragona
+                :DOTerraAlta
+                :DOTierraVinoZamora
+                :DOToro
+                :DOUcles
+                :DOUtielRequena
+                :DOValdeorras
+                :DOValdepenas
+                :DOValencia
+                :DOValleGuimar
+                :DOValleOrotava
+                :DOVinosMadrid
+                :DOYcodenDauteIsora
+                :DOYecla
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
