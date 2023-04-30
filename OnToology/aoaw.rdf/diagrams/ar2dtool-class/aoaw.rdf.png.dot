@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "aoaw:DesignationOrigin" "aoaw:VerdejoGrape" "aoaw:DORiberaDuero" "aoaw:Wine" "aoaw:AlbarinoGrape" "aoaw:TempranilloGrape" "aoaw:Winery" "aoaw:DORueda" "aoaw:DORiasBaixas" "aoaw:GrapeVariety" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "aoaw:DesignationOrigin" "aoaw:VerdejoGrape" "aoaw:DORiberaDuero" "aoaw:Wine" "aoaw:AlbarinoGrape" "aoaw:TempranilloGrape" "aoaw:Winery" "aoaw:DORueda" "aoaw:DORiasBaixas" "aoaw:Country" "aoaw:GrapeVariety" ; /*classes style*/
 	"NULL" -> "xsd:boolean" [ label = "owl:onDataRange" ];
 	"NULL" -> "aoaw:madeFrom" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:float" [ label = "owl:onDataRange" ];
@@ -10,6 +10,7 @@ node [shape = rectangle, color="orange"]; "aoaw:DesignationOrigin" "aoaw:Verdejo
 	"NULL" -> "aoaw:Winery" [ label = "owl:onClass" ];
 	"NULL" -> "aoaw:DesignationOrigin" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "aoaw:vintage" [ label = "owl:onProperty" ];
+	"NULL" -> "aoaw:Country" [ label = "owl:onClass" ];
 	"NULL" -> "aoaw:sparkling" [ label = "owl:onProperty" ];
 	"NULL" -> "aoaw:presentOn" [ label = "owl:onProperty" ];
 	"NULL" -> "aoaw:produces" [ label = "owl:onProperty" ];
@@ -22,30 +23,32 @@ node [shape = rectangle, color="orange"]; "aoaw:DesignationOrigin" "aoaw:Verdejo
 	"NULL" -> "aoaw:DesignationOrigin" [ label = "owl:onClass" ];
 	"NULL" -> "aoaw:acidity" [ label = "owl:onProperty" ];
 	"NULL" -> "aoaw:Winery" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "aoaw:locatedAt" [ label = "owl:onProperty" ];
 	"aoaw:Aalto_2020" -> "aoaw:TempranilloGrape" [ label = "aoaw:madeFrom" ];
 	"aoaw:Aalto_2020" -> "aoaw:Aalto" [ label = "aoaw:producedBy" ];
 	"aoaw:Aalto_2020" -> "aoaw:DORiberaDuero" [ label = "aoaw:hasDesignationOrigin" ];
-	"aoaw:Angel_Lorenzo_Cachazo" -> "aoaw:SpainCountry" [ label = "aoaw:hasCountry" ];
+	"aoaw:Angel_Lorenzo_Cachazo" -> "aoaw:SpainCountry" [ label = "aoaw:locatedAt" ];
 	"aoaw:El_Perro_Verde_2021" -> "aoaw:DORueda" [ label = "aoaw:hasDesignationOrigin" ];
 	"aoaw:El_Perro_Verde_2021" -> "aoaw:Angel_Lorenzo_Cachazo" [ label = "aoaw:producedBy" ];
 	"aoaw:El_Perro_Verde_2021" -> "aoaw:VerdejoGrape" [ label = "aoaw:madeFrom" ];
-	"aoaw:Bodegas_Martin_Codax" -> "aoaw:SpainCountry" [ label = "aoaw:hasCountry" ];
+	"aoaw:Bodegas_Martin_Codax" -> "aoaw:SpainCountry" [ label = "aoaw:locatedAt" ];
 	"aoaw:SpainCountry" -> "http://dbpedia.org/resource/Spain" [ label = "rdfs:sameAs" ];
-	"aoaw:Aalto" -> "aoaw:SpainCountry" [ label = "aoaw:hasCountry" ];
+	"aoaw:Aalto" -> "aoaw:SpainCountry" [ label = "aoaw:locatedAt" ];
 	"aoaw:Marieta_2021" -> "aoaw:AlbarinoGrape" [ label = "aoaw:madeFrom" ];
 	"aoaw:Marieta_2021" -> "aoaw:Bodegas_Martin_Codax" [ label = "aoaw:producedBy" ];
 	"aoaw:Marieta_2021" -> "aoaw:DORiasBaixas" [ label = "aoaw:hasDesignationOrigin" ];
 	"aoaw:GrapeVariety" -> "aoaw:Wine" [ label = "aoaw:presentOn" ];
+	"aoaw:Country" -> "owl:Thing" [ label = "aoaw:hasWinery" ];
 	"aoaw:Wine" -> "xsd:positiveInteger" [ label = "aoaw:body" ];
 	"aoaw:DesignationOrigin" -> "aoaw:Wine" [ label = "aoaw:grantTo" ];
-	"aoaw:Wine" -> "xsd:positiveInteger" [ label = "aoaw:acidity" ];
-	"aoaw:Wine" -> "xsd:positiveInteger" [ label = "aoaw:vintage" ];
-	"aoaw:Winery" -> "owl:Thing" [ label = "aoaw:hasCountry" ];
-	"aoaw:Wine" -> "xsd:boolean" [ label = "aoaw:sparkling" ];
 	"aoaw:Wine" -> "aoaw:GrapeVariety" [ label = "aoaw:madeFrom" ];
 	"aoaw:Wine" -> "aoaw:Winery" [ label = "aoaw:producedBy" ];
-	"aoaw:Winery" -> "aoaw:Wine" [ label = "aoaw:produces" ];
 	"aoaw:Wine" -> "aoaw:DesignationOrigin" [ label = "aoaw:hasDesignationOrigin" ];
+	"aoaw:Wine" -> "xsd:positiveInteger" [ label = "aoaw:acidity" ];
+	"aoaw:Winery" -> "owl:Thing" [ label = "aoaw:locatedAt" ];
+	"aoaw:Wine" -> "xsd:positiveInteger" [ label = "aoaw:vintage" ];
+	"aoaw:Wine" -> "xsd:boolean" [ label = "aoaw:sparkling" ];
+	"aoaw:Winery" -> "aoaw:Wine" [ label = "aoaw:produces" ];
 	"aoaw:Wine" -> "xsd:float" [ label = "aoaw:price" ];
 
 }
