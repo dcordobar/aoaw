@@ -1,0 +1,2305 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#grantTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#price"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#sparkling"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#vintage"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#produces"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#presentOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#madeFrom"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#acidity"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#body"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#ID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Daniel Córdoba Roldán"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An Ontology About Wine\n\nIn this ontology you can find information about types of wine, designation of origin, grape variety and wineries."
+  } ],
+  "http://purl.org/dc/elements/1.1/rights" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "AOAW - An Ontology About Wine"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0.0"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#terms:license" : [ {
+    "@value" : "https://creativecommons.org/licenses/by/4.0/"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Aalto es el emblemático nombre de una bodega que se ha convertido en un referente en la Ribera del Duero. La dilatada experiencia de Mariano García, quien fuera enólogo de Vega Sicilia durante treinta años, se siente en la fuerza y complejidad de los vinos."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bodegas Aalto"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto_2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloWine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Aalto es uno de los grandes referentes de Ribera del Duero, un vino de un gran equilibrio y complejidad, lleno de fuerza y personalidad, maduro y elegante, que debe sus virtudes a unas magníficas uvas de la variedad tinta fina (tempranillo), a una diversidad de suelos y a la vasta experiencia de Mariano García, el enólogo que durante treinta años fue el responsable de la elaboración de los vinos de Vega Sicilia. Desde siempre, ha sido uno de los mejores ejemplos de ribera moderno, convertido hoy en un clásico, un ribera esencial y un vino para las grandes ocasiones."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Aalto 2020"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#acidity" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "7"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#body" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "8"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#madeFrom" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#price" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "36.95"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#sparkling" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#vintage" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "2020"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Albariño Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Albariño Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoWine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Albariño wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Albariño wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#WhiteWine"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Angel_Lorenzo_Cachazo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ángel Lorenzo Cachazo elabora vinos de calidad bajo la DO Rueda desde 1988 aunque su familia cuenta con una larga tradición vitivinícola, sus antepasados ya elaboraban vino en la antigua Tierra de Medina."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ángel Lorenzo Cachazo"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Bodegas_Martin_Codax",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Fundada en 1986 y establecida en Cambados, capital del \"Val do Salnés\", Bodegas Martín Códax es un destacado referente dentro de la denominación de origen \"Rías Baixas\" y, en especial, de la varietal albariño, la más célebre y cotizada variedad de la Denominación."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bodegas Martín Códax"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Cabernet Sauvignon Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cabernet Sauvignon Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Carignan Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Carignan Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Carménère Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Carménère Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Chardonnay Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Chardonnay Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Contry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Contry"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Abona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Abona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Alella"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Alella"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Alicante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Alicante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Almansa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Almansa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Arlanza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Arlanza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Arribes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Arribes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Bierzo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Bierzo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Binissalem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Binissalem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Bullas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Bullas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Calatayud"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Calatayud"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Campo de Borja"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Campo de Borja"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Cangas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Cangas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Cariñena"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Cariñena"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Cataluña"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Cataluña"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Cava"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Cava"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Chacolí de Álava"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Chacolí de Álava"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Chacolí de Bizkaia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Chacolí de Bizkaia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Chacolí de Getaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Chacolí de Getaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Cigales"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Cigales"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Conca de Barberà"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Conca de Barberà"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Condado de Huelva"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Condado de Huelva"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Costers del Segre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Costers del Segre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO El Hierro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO El Hierro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Empordà"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Empordà"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Gran Canaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Gran Canaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Jerez-Xeres-Sherry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Jerez-Xeres-Sherry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Jumilla"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Jumilla"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO La Gomera"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO La Gomera"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO La Mancha"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO La Mancha"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO La Palma"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO La Palma"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Lanzarote"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Lanzarote"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO León"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO León"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Málaga"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Málaga"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Manchuela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Manchuela"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Manzanilla Sanlucar de Barrameda"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Manzanilla Sanlucar de Barrameda"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Méntrida"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Méntrida"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Mondejar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Mondejar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Monterrei"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Monterrei"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Montilla-Moriles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Montilla-Moriles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Montsant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Montsant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Navarra"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Navarra"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Penedes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Penedes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Pla de Bages"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Pla de Bages"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Pla i Llevant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Pla i Llevant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DOCa Priorat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DOCa Priorat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Rias Baixas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Rias Baixas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Ribeira Sacra"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Ribeira Sacra"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Ribeiro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Ribeiro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Ribera del Duero"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Ribera del Duero"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Ribera del Guadiana"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Ribera del Guadiana"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Ribera del Júcar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Ribera del Júcar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DOCa Rioja"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DOCa Rioja"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Rueda"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Rueda"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Sierras de Malaga"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Sierras de Malaga"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Somontano"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Somontano"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Tacoronte-Acentejo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Tacoronte-Acentejo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Tarragona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Tarragona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Terra Alta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Terra Alta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Tierra del Vino de Zamora"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Tierra del Vino de Zamora"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Toro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Toro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Ucles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Ucles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Utiel-Requena"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Utiel-Requena"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Valdeorras"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Valdeorras"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Valdepeñas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Valdepeñas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Valencia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Valencia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Valle de Guimar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Valle de Guimar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Valle de la Orotava"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Valle de la Orotava"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Vinos de Madrid"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Vinos de Madrid"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Ycoden-Daute-Isora"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Ycoden-Daute-Isora"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "DO Yecla"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DO Yecla"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Super  class for designations of origin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Designation of Origin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#El_Perro_Verde_2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoWine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Verdejo El Perro Verde 2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "El Perro Verde 2021"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#acidity" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "6"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#body" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "4"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#madeFrom" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#price" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "10.9"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Angel_Lorenzo_Cachazo"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#sparkling" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#vintage" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "2021"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Garnacha Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Garnacha Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Gewürztraminer Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Gewürztraminer Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Super class for the different grape varieties"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Grape Variety"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Macabeo Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Macabeo Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Malbec Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Malbec Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Marieta_2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoWine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Albariño Marieta 2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Marieta 2021"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#acidity" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "6"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#body" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "4"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#madeFrom" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#price" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "9.9"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Bodegas_Martin_Codax"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#sparkling" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#vintage" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "2021"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Merlot Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Merlot Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Moscatel Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Moscatel Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Nebbiolo Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Nebbiolo Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Parellada Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Parellada Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pinot Meunier Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pinot Meunier Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pinot Noir Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pinot Noir Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RedWine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Red wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Red Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Riesling Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Riesling Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RoseWine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Rose wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rose Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Sauvignon Blanc Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sauvignon Blanc Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Syrah Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Syrah Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Tempranillo Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tempranillo Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloWine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Tempranillo wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Templanillo Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RedWine"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Trepat Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Trepat Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Verdejo Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Verdejo Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoWine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Verdejo wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Verdejo wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#WhiteWine"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#WhiteWine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "White wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "White Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Super class for the different types of wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  }, {
+    "@id" : "_:genid11"
+  }, {
+    "@id" : "_:genid12"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Class that represents a winery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Winery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Xarel·lo Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Xarel·lo Grape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#acidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Level of acidity of the wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "acidity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#body",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Level of body of the wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "body"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#grantTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates a designation of origin with a wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "grantTo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates a wine with his designation of origin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasDesignationOrigin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasWinery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates a country with the wineries located in it"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasWinery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates the country where the winery is located"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "locatedAt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#madeFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates that a wine contains a certain grape variety"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "madeFrom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#presentOn"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#presentOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates that a grape variety is present in a wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "presentOn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Price of the wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates a wine with his winery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "producedBy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#produces"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#produces",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates a winery with his own wines"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "produces"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#sparkling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates if the wine is sparkling or not"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sparkling"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#terms:license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#vintage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates de vintage of the wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "vintage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ]
+} ]
