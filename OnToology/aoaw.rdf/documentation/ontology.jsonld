@@ -1,24 +1,20 @@
 [ {
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#price"
+    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#grantTo"
   } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Wine"
   } ]
 }, {
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#body"
+    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#price"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -26,19 +22,6 @@
   } ]
 }, {
   "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#price"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
@@ -51,7 +34,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
@@ -64,7 +47,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#produces"
@@ -73,16 +56,20 @@
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Wine"
   } ]
 }, {
-  "@id" : "_:genid2",
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#grantTo"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Country"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Wine"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid3",
+  "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#presentOn"
@@ -91,7 +78,7 @@
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Wine"
   } ]
 }, {
-  "@id" : "_:genid4",
+  "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom"
@@ -100,7 +87,7 @@
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"
@@ -109,7 +96,7 @@
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin"
   } ]
 }, {
-  "@id" : "_:genid6",
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Winery"
@@ -118,7 +105,7 @@
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#producedBy"
   } ]
 }, {
-  "@id" : "_:genid7",
+  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Winery"
@@ -131,7 +118,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid8",
+  "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -144,7 +131,7 @@
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin"
   } ]
 }, {
-  "@id" : "_:genid9",
+  "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
@@ -157,12 +144,44 @@
     "@value" : "1"
   } ]
 }, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#body"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Daniel Córdoba Roldán"
+  } ],
+  "http://purl.org/dc/elements/1.1/rights" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "AOAW - An Ontology About Wine"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Aalto",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry" : [ {
+  "http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt" : [ {
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -245,7 +264,7 @@
 }, {
   "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry" : [ {
+  "http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt" : [ {
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -260,7 +279,7 @@
 }, {
   "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry" : [ {
+  "http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt" : [ {
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1389,7 +1408,7 @@
   "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid2"
+    "@id" : "_:genid1"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021",
@@ -1466,7 +1485,7 @@
   "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid3"
+    "@id" : "_:genid2"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape",
@@ -1762,6 +1781,8 @@
   "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Wine",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid3"
+  }, {
     "@id" : "_:genid4"
   }, {
     "@id" : "_:genid5"
@@ -1779,13 +1800,13 @@
     "@id" : "_:genid11"
   }, {
     "@id" : "_:genid12"
-  }, {
-    "@id" : "_:genid13"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Winery",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid13"
+  }, {
     "@id" : "_:genid14"
   } ]
 }, {
@@ -1834,12 +1855,6 @@
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Winery"
-  } ]
-}, {
   "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1847,6 +1862,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#hasWinery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Country"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Winery"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom",
@@ -1874,8 +1904,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Wine"
-  }, {
-    "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"

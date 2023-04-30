@@ -3416,8 +3416,8 @@ This section provides details for each class and property defined by [Ontology N
          <dd/>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasCountry"
-               title="http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry">has country</a>
+            <a href="#locatedAt"
+               title="http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt">located at</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#produces"
                title="http://www.semanticweb.org/dani/ontologies/aoaw#produces">produces</a>
             <sup class="type-op" title="object property">op</sup>
@@ -3476,15 +3476,21 @@ This section provides details for each class and property defined by [Ontology N
          </a>
       </li>
       <li>
-         <a href="#hasCountry"
-            title="http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry">
-            <span>has country</span>
-         </a>
-      </li>
-      <li>
          <a href="#hasDesignationOrigin"
             title="http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin">
             <span>has designation origin</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasWinery"
+            title="http://www.semanticweb.org/dani/ontologies/aoaw#hasWinery">
+            <span>has winery</span>
+         </a>
+      </li>
+      <li>
+         <a href="#locatedAt"
+            title="http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt">
+            <span>located at</span>
          </a>
       </li>
       <li>
@@ -3542,24 +3548,6 @@ This section provides details for each class and property defined by [Ontology N
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasCountry">
-      <h3>has country<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Winery"
-                  title="http://www.semanticweb.org/dani/ontologies/aoaw#Winery">winery</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="hasDesignationOrigin">
       <h3>has designation origin<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -3585,6 +3573,55 @@ This section provides details for each class and property defined by [Ontology N
             <dd>
                <a href="#grantTo"
                   title="http://www.semanticweb.org/dani/ontologies/aoaw#grantTo">grant to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasWinery">
+      <h3>has winery<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/dani/ontologies/aoaw#hasWinery</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.semanticweb.org/dani/ontologies/aoaw#Country"
+                  target="_blank"
+                  title="http://www.semanticweb.org/dani/ontologies/aoaw#Country">country</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#locatedAt"
+                  title="http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt">located at</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="locatedAt">
+      <h3>located at<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Winery"
+                  title="http://www.semanticweb.org/dani/ontologies/aoaw#Winery">winery</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasWinery"
+                  title="http://www.semanticweb.org/dani/ontologies/aoaw#hasWinery">has winery</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -3807,11 +3844,6 @@ This section provides details for each class and property defined by [Ontology N
                   title="http://www.semanticweb.org/dani/ontologies/aoaw#Wine">wine</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dd>
-               <a href="#price"
-                  title="http://www.semanticweb.org/dani/ontologies/aoaw#price">price</a>
-               <sup class="type-dp" title="data property">dp</sup> 
-               <span class="logic">exactly</span> 1</dd>
             <dt>has range</dt>
             <dd>
                <a href="http://www.w3.org/2001/XMLSchema#float"
@@ -4574,8 +4606,8 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
-            <a href="#hasCountry"
-               title="http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry">has country</a>
+            <a href="#locatedAt"
+               title="http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt">located at</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry"
                target="_blank"
@@ -4602,8 +4634,8 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
-            <a href="#hasCountry"
-               title="http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry">has country</a>
+            <a href="#locatedAt"
+               title="http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt">located at</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry"
                target="_blank"
@@ -6622,8 +6654,8 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
-            <a href="#hasCountry"
-               title="http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry">has country</a>
+            <a href="#locatedAt"
+               title="http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt">located at</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry"
                target="_blank"

@@ -1,4 +1,7 @@
 <http://www.semanticweb.org/dani/ontologies/aoaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/dani/ontologies/aoaw> <http://purl.org/dc/elements/1.1/creator> "Daniel Córdoba Roldán" .
+<http://www.semanticweb.org/dani/ontologies/aoaw> <http://purl.org/dc/elements/1.1/rights> "http://creativecommons.org/licenses/by/4.0/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/dani/ontologies/aoaw> <http://purl.org/dc/elements/1.1/title> "AOAW - An Ontology About Wine" .
 # 
 # 
 # #################################################################
@@ -7,6 +10,15 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#ID
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -29,14 +41,19 @@
 <http://www.semanticweb.org/dani/ontologies/aoaw#grantTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#grantTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
 # 
-# http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry
-<http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
-# 
 # http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin
 <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#hasWinery
+<http://www.semanticweb.org/dani/ontologies/aoaw#hasWinery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#hasWinery> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#hasWinery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Country> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt
+<http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
 # 
 # http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom
 <http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -82,11 +99,6 @@
 # http://www.semanticweb.org/dani/ontologies/aoaw#price
 <http://www.semanticweb.org/dani/ontologies/aoaw#price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#price> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
-<http://www.semanticweb.org/dani/ontologies/aoaw#price> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
-_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#price> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#price> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
 # 
 # http://www.semanticweb.org/dani/ontologies/aoaw#sparkling
@@ -419,10 +431,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin
 <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
-_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#grantTo> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#grantTo> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape
 <http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -434,10 +446,10 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety
 <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
-_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#presentOn> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#presentOn> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape
 <http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -519,59 +531,64 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://www.semanticweb.org/dani/ontologies/aoaw#Wine
 <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#producedBy> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#producedBy> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
-_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#producedBy> .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+_:genid7 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
-_:genid8 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> .
+_:genid8 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#acidity> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
 _:genid9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
 _:genid9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#acidity> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#body> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
 _:genid10 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#body> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#price> .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
 _:genid11 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#price> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#sparkling> .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
 _:genid12 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#sparkling> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#vintage> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
-_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#vintage> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://www.semanticweb.org/dani/ontologies/aoaw#Winery
 <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Winery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#produces> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#produces> .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/dani/ontologies/aoaw#Country> .
+_:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
 # http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape
@@ -590,7 +607,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://www.semanticweb.org/dani/ontologies/aoaw#Aalto
 <http://www.semanticweb.org/dani/ontologies/aoaw#Aalto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Aalto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
-<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto> <http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry> <http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto> <http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt> <http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Aalto> <http://www.w3.org/2000/01/rdf-schema#comment> "Aalto es el emblemático nombre de una bodega que se ha convertido en un referente en la Ribera del Duero. La dilatada experiencia de Mariano García, quien fuera enólogo de Vega Sicilia durante treinta años, se siente en la fuerza y complejidad de los vinos." .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Aalto> <http://www.w3.org/2000/01/rdf-schema#label> "Bodegas Aalto" .
 # 
@@ -615,14 +632,14 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo
 <http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
-<http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo> <http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry> <http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo> <http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt> <http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo> <http://www.w3.org/2000/01/rdf-schema#comment> "Bodegas Ángel Lorenzo Cachazo" .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo> <http://www.w3.org/2000/01/rdf-schema#label> "Ángel Lorenzo Cachazo" .
 # 
 # http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax
 <http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
-<http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax> <http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry> <http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax> <http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt> <http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry> .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax> <http://www.w3.org/2000/01/rdf-schema#comment> "Bodegas Martín Códax" .
 <http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax> <http://www.w3.org/2000/01/rdf-schema#label> "Bodegas Martín Códax" .
 # 

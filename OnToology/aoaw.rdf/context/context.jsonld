@@ -57,6 +57,10 @@
       "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#body",
       "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
+    "hasWinery" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#hasWinery",
+      "@type" : "@id"
+    },
     "DOAlmansa" : {
       "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa"
     },
@@ -159,6 +163,9 @@
     "DOToro" : {
       "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOToro"
     },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
     "DOElHierro" : {
       "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro"
     },
@@ -182,6 +189,13 @@
     },
     "DOChacoliBizkaia" : {
       "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia"
+    },
+    "locatedAt" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#locatedAt",
+      "@type" : "@id"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
     },
     "DOLanzarote" : {
       "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote"
@@ -232,6 +246,9 @@
     "produces" : {
       "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#produces",
       "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
     },
     "DONavarra" : {
       "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra"
@@ -327,10 +344,6 @@
     },
     "grantTo" : {
       "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#grantTo",
-      "@type" : "@id"
-    },
-    "hasCountry" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry",
       "@type" : "@id"
     },
     "CarmenereGrape" : {

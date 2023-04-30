@@ -5,7 +5,7 @@
    <key for="edge" id="d2" yfiles.type="edgegraphics" />
    <key attr.name="description" attr.type="string" for="edge" id="d3" />
    <key for="graphml" id="d4" yfiles.type="resources" />
-   <graph edgedefault="directed" id="G" parse.edges="45" parse.nodes="34" parse.order="free">
+   <graph edgedefault="directed" id="G" parse.edges="48" parse.nodes="36" parse.order="free">
       <node id="nid_NULL">
          <data key="d0">
             <y:ShapeNode>
@@ -202,6 +202,29 @@
          </data>
          <data key="d3" />
       </edge>
+      <node id="nid_aoaw:Country">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="120.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">aoaw:Country</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_owl:onClass8" source="nid_NULL" target="nid_aoaw:Country">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:onClass</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_aoaw:sparkling">
          <data key="d0">
             <y:ShapeNode>
@@ -214,7 +237,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty8" source="nid_NULL" target="nid_aoaw:sparkling">
+    <edge id="eid_owl:onProperty9" source="nid_NULL" target="nid_aoaw:sparkling">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -237,7 +260,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty9" source="nid_NULL" target="nid_aoaw:presentOn">
+    <edge id="eid_owl:onProperty10" source="nid_NULL" target="nid_aoaw:presentOn">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -260,7 +283,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty10" source="nid_NULL" target="nid_aoaw:produces">
+    <edge id="eid_owl:onProperty11" source="nid_NULL" target="nid_aoaw:produces">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -283,7 +306,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom11" source="nid_NULL" target="nid_aoaw:Wine">
+    <edge id="eid_owl:someValuesFrom12" source="nid_NULL" target="nid_aoaw:Wine">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -306,7 +329,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty12" source="nid_NULL" target="nid_aoaw:body">
+    <edge id="eid_owl:onProperty13" source="nid_NULL" target="nid_aoaw:body">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -329,7 +352,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onDataRange13" source="nid_NULL" target="nid_xsd:positiveInteger">
+    <edge id="eid_owl:onDataRange14" source="nid_NULL" target="nid_xsd:positiveInteger">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -352,7 +375,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty14" source="nid_NULL" target="nid_aoaw:price">
+    <edge id="eid_owl:onProperty15" source="nid_NULL" target="nid_aoaw:price">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -375,7 +398,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty15" source="nid_NULL" target="nid_aoaw:grantTo">
+    <edge id="eid_owl:onProperty16" source="nid_NULL" target="nid_aoaw:grantTo">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -398,7 +421,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty16" source="nid_NULL" target="nid_aoaw:hasDesignationOrigin">
+    <edge id="eid_owl:onProperty17" source="nid_NULL" target="nid_aoaw:hasDesignationOrigin">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -409,7 +432,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_owl:onClass17" source="nid_NULL" target="nid_aoaw:DesignationOrigin">
+    <edge id="eid_owl:onClass18" source="nid_NULL" target="nid_aoaw:DesignationOrigin">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -432,7 +455,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty18" source="nid_NULL" target="nid_aoaw:acidity">
+    <edge id="eid_owl:onProperty19" source="nid_NULL" target="nid_aoaw:acidity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -443,12 +466,35 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_owl:allValuesFrom19" source="nid_NULL" target="nid_aoaw:Winery">
+    <edge id="eid_owl:allValuesFrom20" source="nid_NULL" target="nid_aoaw:Winery">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:allValuesFrom</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_aoaw:locatedAt">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="140.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">aoaw:locatedAt</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_owl:onProperty21" source="nid_NULL" target="nid_aoaw:locatedAt">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:onProperty</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -478,7 +524,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_aoaw:madeFrom20" source="nid_aoaw:Aalto_2020" target="nid_aoaw:TempranilloGrape">
+    <edge id="eid_aoaw:madeFrom22" source="nid_aoaw:Aalto_2020" target="nid_aoaw:TempranilloGrape">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -501,7 +547,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_aoaw:producedBy21" source="nid_aoaw:Aalto_2020" target="nid_aoaw:Aalto">
+    <edge id="eid_aoaw:producedBy23" source="nid_aoaw:Aalto_2020" target="nid_aoaw:Aalto">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -524,7 +570,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_aoaw:hasDesignationOrigin22" source="nid_aoaw:Aalto_2020" target="nid_aoaw:DORiberaDuero">
+    <edge id="eid_aoaw:hasDesignationOrigin24" source="nid_aoaw:Aalto_2020" target="nid_aoaw:DORiberaDuero">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -559,12 +605,12 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_aoaw:hasCountry23" source="nid_aoaw:Angel_Lorenzo_Cachazo" target="nid_aoaw:SpainCountry">
+    <edge id="eid_aoaw:locatedAt25" source="nid_aoaw:Angel_Lorenzo_Cachazo" target="nid_aoaw:SpainCountry">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:hasCountry</y:EdgeLabel>
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:locatedAt</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -594,7 +640,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_aoaw:hasDesignationOrigin24" source="nid_aoaw:El_Perro_Verde_2021" target="nid_aoaw:DORueda">
+    <edge id="eid_aoaw:hasDesignationOrigin26" source="nid_aoaw:El_Perro_Verde_2021" target="nid_aoaw:DORueda">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -605,7 +651,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_aoaw:producedBy25" source="nid_aoaw:El_Perro_Verde_2021" target="nid_aoaw:Angel_Lorenzo_Cachazo">
+    <edge id="eid_aoaw:producedBy27" source="nid_aoaw:El_Perro_Verde_2021" target="nid_aoaw:Angel_Lorenzo_Cachazo">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -628,7 +674,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_aoaw:madeFrom26" source="nid_aoaw:El_Perro_Verde_2021" target="nid_aoaw:VerdejoGrape">
+    <edge id="eid_aoaw:madeFrom28" source="nid_aoaw:El_Perro_Verde_2021" target="nid_aoaw:VerdejoGrape">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -651,12 +697,12 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_aoaw:hasCountry27" source="nid_aoaw:Bodegas_Martin_Codax" target="nid_aoaw:SpainCountry">
+    <edge id="eid_aoaw:locatedAt29" source="nid_aoaw:Bodegas_Martin_Codax" target="nid_aoaw:SpainCountry">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:hasCountry</y:EdgeLabel>
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:locatedAt</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -674,7 +720,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:sameAs28" source="nid_aoaw:SpainCountry" target="nid_http://dbpedia.org/resource/Spain">
+    <edge id="eid_rdfs:sameAs30" source="nid_aoaw:SpainCountry" target="nid_http://dbpedia.org/resource/Spain">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -685,12 +731,12 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_aoaw:hasCountry29" source="nid_aoaw:Aalto" target="nid_aoaw:SpainCountry">
+    <edge id="eid_aoaw:locatedAt31" source="nid_aoaw:Aalto" target="nid_aoaw:SpainCountry">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:hasCountry</y:EdgeLabel>
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:locatedAt</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -720,7 +766,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_aoaw:madeFrom30" source="nid_aoaw:Marieta_2021" target="nid_aoaw:AlbarinoGrape">
+    <edge id="eid_aoaw:madeFrom32" source="nid_aoaw:Marieta_2021" target="nid_aoaw:AlbarinoGrape">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -731,7 +777,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_aoaw:producedBy31" source="nid_aoaw:Marieta_2021" target="nid_aoaw:Bodegas_Martin_Codax">
+    <edge id="eid_aoaw:producedBy33" source="nid_aoaw:Marieta_2021" target="nid_aoaw:Bodegas_Martin_Codax">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -754,7 +800,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_aoaw:hasDesignationOrigin32" source="nid_aoaw:Marieta_2021" target="nid_aoaw:DORiasBaixas">
+    <edge id="eid_aoaw:hasDesignationOrigin34" source="nid_aoaw:Marieta_2021" target="nid_aoaw:DORiasBaixas">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -765,56 +811,12 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_aoaw:presentOn33" source="nid_aoaw:GrapeVariety" target="nid_aoaw:Wine">
+    <edge id="eid_aoaw:presentOn35" source="nid_aoaw:GrapeVariety" target="nid_aoaw:Wine">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:presentOn</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_aoaw:body34" source="nid_aoaw:Wine" target="nid_xsd:positiveInteger">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:body</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_aoaw:grantTo35" source="nid_aoaw:DesignationOrigin" target="nid_aoaw:Wine">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:grantTo</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_aoaw:acidity36" source="nid_aoaw:Wine" target="nid_xsd:positiveInteger">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:acidity</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_aoaw:vintage37" source="nid_aoaw:Wine" target="nid_xsd:positiveInteger">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:vintage</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -832,29 +834,40 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_aoaw:hasCountry38" source="nid_aoaw:Winery" target="nid_owl:Thing">
+    <edge id="eid_aoaw:hasWinery36" source="nid_aoaw:Country" target="nid_owl:Thing">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:hasCountry</y:EdgeLabel>
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:hasWinery</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_aoaw:sparkling39" source="nid_aoaw:Wine" target="nid_xsd:boolean">
+    <edge id="eid_aoaw:body37" source="nid_aoaw:Wine" target="nid_xsd:positiveInteger">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:sparkling</y:EdgeLabel>
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:body</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_aoaw:madeFrom40" source="nid_aoaw:Wine" target="nid_aoaw:GrapeVariety">
+    <edge id="eid_aoaw:grantTo38" source="nid_aoaw:DesignationOrigin" target="nid_aoaw:Wine">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:grantTo</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_aoaw:madeFrom39" source="nid_aoaw:Wine" target="nid_aoaw:GrapeVariety">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -865,7 +878,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_aoaw:producedBy41" source="nid_aoaw:Wine" target="nid_aoaw:Winery">
+    <edge id="eid_aoaw:producedBy40" source="nid_aoaw:Wine" target="nid_aoaw:Winery">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -876,18 +889,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_aoaw:produces42" source="nid_aoaw:Winery" target="nid_aoaw:Wine">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:produces</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_aoaw:hasDesignationOrigin43" source="nid_aoaw:Wine" target="nid_aoaw:DesignationOrigin">
+    <edge id="eid_aoaw:hasDesignationOrigin41" source="nid_aoaw:Wine" target="nid_aoaw:DesignationOrigin">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -898,7 +900,62 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_aoaw:price44" source="nid_aoaw:Wine" target="nid_xsd:float">
+    <edge id="eid_aoaw:acidity42" source="nid_aoaw:Wine" target="nid_xsd:positiveInteger">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:acidity</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_aoaw:locatedAt43" source="nid_aoaw:Winery" target="nid_owl:Thing">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:locatedAt</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_aoaw:vintage44" source="nid_aoaw:Wine" target="nid_xsd:positiveInteger">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:vintage</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_aoaw:sparkling45" source="nid_aoaw:Wine" target="nid_xsd:boolean">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:sparkling</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_aoaw:produces46" source="nid_aoaw:Winery" target="nid_aoaw:Wine">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">aoaw:produces</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_aoaw:price47" source="nid_aoaw:Wine" target="nid_xsd:float">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
