@@ -7,14 +7,17 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:aoaw="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#terms:">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf">
         <dc:creator>Daniel Córdoba Roldán</dc:creator>
+        <dc:description>An Ontology About Wine
+
+In this ontology you can find information about types of wine, designation of origin, grape variety and wineries.</dc:description>
         <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://creativecommons.org/licenses/by/4.0/</dc:rights>
         <dc:title>AOAW - An Ontology About Wine</dc:title>
-        <rdfs:comment>An Ontology About Wine
-
-In this ontology you can find information about types of wine, designation of origin, grape variety and wineries.</rdfs:comment>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
     </owl:Ontology>
     
 
@@ -33,6 +36,12 @@ In this ontology you can find information about types of wine, designation of or
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
@@ -57,6 +66,12 @@ In this ontology you can find information about types of wine, designation of or
     <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#terms:license -->
+
+    <owl:AnnotationProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#terms:license"/>
     
 
 
@@ -292,7 +307,10 @@ In this ontology you can find information about types of wine, designation of or
 
     <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country">
+        <rdfs:comment>Contry</rdfs:comment>
+        <rdfs:label>Contry</rdfs:label>
+    </owl:Class>
     
 
 
@@ -865,6 +883,8 @@ In this ontology you can find information about types of wine, designation of or
                 <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Super  class for designations of origin</rdfs:comment>
+        <rdfs:label>Designation of Origin</rdfs:label>
     </owl:Class>
     
 
@@ -894,6 +914,8 @@ In this ontology you can find information about types of wine, designation of or
                 <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Super class for the different grape varieties</rdfs:comment>
+        <rdfs:label>Grape Variety</rdfs:label>
     </owl:Class>
     
 
@@ -966,6 +988,8 @@ In this ontology you can find information about types of wine, designation of or
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RedWine">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+        <rdfs:comment>Red wine</rdfs:comment>
+        <rdfs:label>Red Wine</rdfs:label>
     </owl:Class>
     
 
@@ -982,6 +1006,8 @@ In this ontology you can find information about types of wine, designation of or
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RoseWine">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+        <rdfs:comment>Rose wine</rdfs:comment>
+        <rdfs:label>Rose Wine</rdfs:label>
     </owl:Class>
     
 
@@ -1014,6 +1040,8 @@ In this ontology you can find information about types of wine, designation of or
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloWine">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RedWine"/>
+        <rdfs:comment>Tempranillo wine</rdfs:comment>
+        <rdfs:label>Templanillo Wine</rdfs:label>
     </owl:Class>
     
 
@@ -1048,6 +1076,8 @@ In this ontology you can find information about types of wine, designation of or
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#WhiteWine">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+        <rdfs:comment>White wine</rdfs:comment>
+        <rdfs:label>White Wine</rdfs:label>
     </owl:Class>
     
 
@@ -1122,6 +1152,8 @@ In this ontology you can find information about types of wine, designation of or
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Super class for the different types of wine</rdfs:comment>
+        <rdfs:label>Wine</rdfs:label>
     </owl:Class>
     
 
@@ -1142,6 +1174,8 @@ In this ontology you can find information about types of wine, designation of or
                 <owl:onClass rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Class that represents a winery</rdfs:comment>
+        <rdfs:label>Winery</rdfs:label>
     </owl:Class>
     
 
