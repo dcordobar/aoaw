@@ -353,6 +353,9 @@
     "@value" : "1"
   } ]
 }, {
+  "@id" : "http://creativecommons.org/ns#license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -373,24 +376,20 @@
 }, {
   "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://creativecommons.org/ns#license" : [ {
+    "@value" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Daniel Córdoba Roldán"
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@value" : "An Ontology About Wine\n\nIn this ontology you can find information about types of wine, designation of origin, grape variety and wineries."
   } ],
-  "http://purl.org/dc/elements/1.1/rights" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://creativecommons.org/licenses/by/4.0/"
-  } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@value" : "AOAW - An Ontology About Wine"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "1.0.0"
-  } ],
-  "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#terms:license" : [ {
-    "@value" : "https://creativecommons.org/licenses/by/4.0/"
   } ]
 }, {
   "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto",

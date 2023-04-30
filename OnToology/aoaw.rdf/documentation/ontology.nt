@@ -1,10 +1,9 @@
 <https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by/4.0/" .
 <https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf> <http://purl.org/dc/elements/1.1/creator> "Daniel Córdoba Roldán" .
 <https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf> <http://purl.org/dc/elements/1.1/description> "An Ontology About Wine\n\nIn this ontology you can find information about types of wine, designation of origin, grape variety and wineries." .
-<https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf> <http://purl.org/dc/elements/1.1/rights> "http://creativecommons.org/licenses/by/4.0/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf> <http://purl.org/dc/elements/1.1/title> "AOAW - An Ontology About Wine" .
 <https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
-<https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf> <https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#terms:license> "https://creativecommons.org/licenses/by/4.0/" .
 # 
 # 
 # #################################################################
@@ -13,6 +12,9 @@
 # #
 # #################################################################
 # 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
