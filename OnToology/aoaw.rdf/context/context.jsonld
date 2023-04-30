@@ -1,294 +1,311 @@
 {
   "@context" : {
     "DOArlanza" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza"
     },
     "DOBierzo" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo"
     },
     "MerlotGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape"
     },
     "DORiberaDuero" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero"
     },
     "RieslingGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape"
     },
     "DOLeon" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon"
     },
     "DOChacoliGetaria" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria"
     },
     "ParelladaGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape"
     },
     "hasDesignationOrigin" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin",
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin",
       "@type" : "@id"
     },
     "Winery" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Winery"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"
     },
     "DOCigales" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales"
     },
     "DOMonterrei" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei"
     },
     "SauvignonBlancGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape"
     },
     "Country" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Country"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"
     },
     "VerdejoGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape"
     },
     "DOLaMancha" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha"
     },
     "madeFrom" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom",
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#madeFrom",
       "@type" : "@id"
     },
     "body" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#body",
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#body",
       "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
+    "hasWinery" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasWinery",
+      "@type" : "@id"
+    },
     "DOAlmansa" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa"
     },
     "DOMalaga" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga"
     },
     "presentOn" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#presentOn",
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#presentOn",
       "@type" : "@id"
     },
     "DOLaPalma" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma"
     },
     "DOValleGuimar" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar"
     },
     "DOUcles" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles"
     },
     "DOGranCanaria" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria"
     },
     "producedBy" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#producedBy",
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy",
       "@type" : "@id"
     },
     "AlbarinoWine" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoWine"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoWine"
     },
     "DOLaGomera" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera"
     },
     "DOAlella" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella"
     },
     "DOValencia" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia"
     },
     "DOValdeorras" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "DOMondejar" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar"
     },
     "DOVinosMadrid" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid"
     },
     "DOMontsant" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant"
     },
     "DesignationOrigin" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"
     },
     "DORiberaGuadiana" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana"
     },
     "GarnachaGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape"
     },
     "DOPlaBages" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages"
     },
     "PinotNoirGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape"
     },
     "DOCostersSegre" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre"
     },
     "DOMontillaMoriles" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles"
     },
     "DORiasBaixas" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas"
     },
     "PinotMeunierGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape"
     },
     "TempranilloWine" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloWine"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloWine"
     },
     "DOEmporda" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda"
     },
     "vintage" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#vintage",
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#vintage",
       "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "DOTarragona" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona"
     },
     "MacabeoGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape"
     },
     "DOUtielRequena" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena"
     },
     "DOToro" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOToro"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
     "DOElHierro" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro"
     },
     "DOPlaLlevant" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant"
     },
     "DOCampoBorja" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja"
     },
     "DORibeiro" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro"
     },
     "DORioja" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORioja"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja"
     },
     "DOAlicante" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante"
     },
     "MoscatelGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape"
     },
     "DOChacoliBizkaia" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia"
+    },
+    "locatedAt" : {
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt",
+      "@type" : "@id"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
     },
     "DOLanzarote" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote"
     },
     "ID" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#ID"
     },
     "DOYecla" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla"
     },
     "DOYcodenDauteIsora" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora"
     },
     "DOMentrida" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida"
     },
     "DOManchuela" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela"
     },
     "DORibeiraSacra" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra"
     },
     "acidity" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#acidity",
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#acidity",
       "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "GewurztraminerGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape"
     },
     "NebbioloGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape"
     },
     "DOSomontano" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano"
     },
     "DOArribes" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes"
     },
     "WhiteWine" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#WhiteWine"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#WhiteWine"
     },
     "TempranilloGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape"
     },
     "DOConcaBarbera" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera"
     },
     "produces" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#produces",
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#produces",
       "@type" : "@id"
     },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
     "DONavarra" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra"
     },
     "AlbarinoGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape"
     },
     "RoseWine" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#RoseWine"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RoseWine"
     },
     "CabernetSauvignonGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape"
     },
     "DOJerezXeresSherry" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry"
     },
     "DOPenedes" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes"
     },
     "DOAbona" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona"
     },
     "DOTerraAlta" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta"
     },
     "DOCalatayud" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud"
     },
     "DOSierrasMálaga" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga"
     },
     "DOManzanillaSanlucarBarrameda" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda"
     },
     "ChardonnayGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape"
     },
     "DOCangas" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas"
     },
     "MalbecGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape"
     },
     "DOCondadoHuelva" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva"
     },
     "DOPriorat" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat"
     },
     "DOChacoliAlava" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava"
     },
     "DOValdepenas" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas"
     },
     "DOCarinena" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena"
     },
     "sameAs" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
@@ -297,77 +314,73 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "VerdejoWine" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoWine"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoWine"
     },
     "price" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#price",
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#price",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "DOTacoronteAcentejo" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo"
     },
     "sparkling" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#sparkling",
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#sparkling",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "DOBullas" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas"
     },
     "DOCava" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCava"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava"
     },
     "DOBinissalem" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem"
     },
     "DOValleOrotava" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava"
     },
     "XarelloGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape"
     },
     "grantTo" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#grantTo",
-      "@type" : "@id"
-    },
-    "hasCountry" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry",
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#grantTo",
       "@type" : "@id"
     },
     "CarmenereGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape"
     },
     "TrepatGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape"
     },
     "SyrahGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape"
     },
     "GrapeVariety" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"
     },
     "DOJumilla" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla"
     },
     "DOTierraVinoZamora" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora"
     },
     "CarignanGrape" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape"
     },
     "DORiberaJucar" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar"
     },
     "DORueda" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORueda"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda"
     },
     "RedWine" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#RedWine"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RedWine"
     },
     "Wine" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Wine"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"
     },
     "DOCataluna" : {
-      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna"
+      "@id" : "https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna"
     }
   }
 }

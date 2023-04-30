@@ -1,13 +1,21 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/dani/ontologies/aoaw#"
-     xml:base="http://www.semanticweb.org/dani/ontologies/aoaw"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#"
+     xml:base="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:aoaw="http://www.semanticweb.org/dani/ontologies/aoaw#"
+     xmlns:aoaw="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw"/>
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf">
+        <dc:creator>Daniel Córdoba Roldán</dc:creator>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://creativecommons.org/licenses/by/4.0/</dc:rights>
+        <dc:title>AOAW - An Ontology About Wine</dc:title>
+        <rdfs:comment>An Ontology About Wine
+
+In this ontology you can find information about types of wine, designation of origin, grape variety and wineries.</rdfs:comment>
+    </owl:Ontology>
     
 
 
@@ -20,6 +28,27 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
@@ -49,74 +78,100 @@
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#grantTo -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#grantTo -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#grantTo">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#grantTo">
+        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+        <rdfs:comment>Relates a designation of origin with a wine</rdfs:comment>
+        <rdfs:label>grantTo</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Winery"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
+        <rdfs:comment>Relates a wine with his designation of origin</rdfs:comment>
+        <rdfs:label>hasDesignationOrigin</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasWinery -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasWinery">
+        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"/>
+        <rdfs:comment>Relates a country with the wineries located in it</rdfs:comment>
+        <rdfs:label>hasWinery</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#presentOn"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
+        <rdfs:comment>Indicates the country where the winery is located</rdfs:comment>
+        <rdfs:label>locatedAt</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#presentOn -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#madeFrom -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#presentOn">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#madeFrom">
+        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#presentOn"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
+        <rdfs:comment>Indicates that a wine contains a certain grape variety</rdfs:comment>
+        <rdfs:label>madeFrom</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#producedBy -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#presentOn -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#producedBy">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#produces"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Winery"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#presentOn">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+        <rdfs:comment>Indicates that a grape variety is present in a wine</rdfs:comment>
+        <rdfs:label>presentOn</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#produces -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#produces">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Winery"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy">
+        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#produces"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
+        <rdfs:comment>Relates a wine with his winery</rdfs:comment>
+        <rdfs:label>producedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#produces -->
+
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#produces">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+        <rdfs:comment>Relates a winery with his own wines</rdfs:comment>
+        <rdfs:label>produces</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -133,59 +188,62 @@
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#acidity -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#acidity -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#acidity">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#acidity">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>Level of acidity of the wine</rdfs:comment>
+        <rdfs:label>acidity</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#body -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#body -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#body">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#body">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>Level of body of the wine</rdfs:comment>
+        <rdfs:label>body</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#price -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#price -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#price">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#price"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:domain>
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#price">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Price of the wine</rdfs:comment>
+        <rdfs:label>price</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#sparkling -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#sparkling -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#sparkling">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#sparkling">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates if the wine is sparkling or not</rdfs:comment>
+        <rdfs:label>sparkling</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#vintage -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#vintage -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#vintage">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#vintage">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>Indicates de vintage of the wine</rdfs:comment>
+        <rdfs:label>vintage</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -202,985 +260,985 @@
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoWine -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoWine -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoWine">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#WhiteWine"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoWine">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#WhiteWine"/>
         <rdfs:comment>Albariño wine</rdfs:comment>
         <rdfs:label>Albariño wine</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#Country -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#Country"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"/>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCava -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCava">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORioja -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORioja">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORueda -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORueda">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOToro -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOToro">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#grantTo"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#grantTo"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#presentOn"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#presentOn"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#RedWine -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RedWine -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#RedWine">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RedWine">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#RoseWine -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RoseWine -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#RoseWine">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RoseWine">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloWine -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloWine -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloWine">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#RedWine"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloWine">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RedWine"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoWine -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoWine -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoWine">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#WhiteWine"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoWine">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#WhiteWine"/>
         <rdfs:comment>Verdejo wine</rdfs:comment>
         <rdfs:label>Verdejo wine</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#WhiteWine -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#WhiteWine -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#WhiteWine">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#WhiteWine">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#Wine -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#Wine">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#madeFrom"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#producedBy"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Winery"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#producedBy"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#producedBy"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Winery"/>
+                <owl:onClass rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasDesignationOrigin"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"/>
+                <owl:onClass rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DesignationOrigin"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#acidity"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#acidity"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#body"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#body"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#price"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#price"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#sparkling"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#sparkling"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#vintage"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#vintage"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
             </owl:Restriction>
@@ -1189,25 +1247,32 @@
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#Winery -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#Winery">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#produces"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Wine"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#produces"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Wine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GrapeVariety"/>
     </owl:Class>
     
 
@@ -1224,26 +1289,26 @@
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#Aalto -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#Aalto">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Winery"/>
-        <hasCountry rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
+        <locatedAt rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"/>
         <rdfs:comment>Aalto es el emblemático nombre de una bodega que se ha convertido en un referente en la Ribera del Duero. La dilatada experiencia de Mariano García, quien fuera enólogo de Vega Sicilia durante treinta años, se siente en la fuerza y complejidad de los vinos.</rdfs:comment>
         <rdfs:label>Bodegas Aalto</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020 -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto_2020 -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloWine"/>
-        <hasDesignationOrigin rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero"/>
-        <madeFrom rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape"/>
-        <producedBy rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Aalto"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto_2020">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloWine"/>
+        <hasDesignationOrigin rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero"/>
+        <madeFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape"/>
+        <producedBy rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Aalto"/>
         <acidity rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">7</acidity>
         <body rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">8</body>
         <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.95</price>
@@ -1255,713 +1320,713 @@
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Angel_Lorenzo_Cachazo -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Winery"/>
-        <hasCountry rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry"/>
-        <rdfs:comment>Bodegas Ángel Lorenzo Cachazo</rdfs:comment>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Angel_Lorenzo_Cachazo">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
+        <locatedAt rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"/>
+        <rdfs:comment>Ángel Lorenzo Cachazo elabora vinos de calidad bajo la DO Rueda desde 1988 aunque su familia cuenta con una larga tradición vitivinícola, sus antepasados ya elaboraban vino en la antigua Tierra de Medina.</rdfs:comment>
         <rdfs:label>Ángel Lorenzo Cachazo</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Bodegas_Martin_Codax -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Winery"/>
-        <hasCountry rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry"/>
-        <rdfs:comment>Bodegas Martín Códax</rdfs:comment>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Bodegas_Martin_Codax">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
+        <locatedAt rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"/>
+        <rdfs:comment>Fundada en 1986 y establecida en Cambados, capital del &quot;Val do Salnés&quot;, Bodegas Martín Códax es un destacado referente dentro de la denominación de origen &quot;Rías Baixas&quot; y, en especial, de la varietal albariño, la más célebre y cotizada variedad de la Denominación.</rdfs:comment>
         <rdfs:label>Bodegas Martín Códax</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCava -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCava">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOCava"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORioja -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORioja">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DORioja"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DORueda -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORueda">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DORueda"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOToro -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOToro">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOToro"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021 -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#El_Perro_Verde_2021 -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoWine"/>
-        <hasDesignationOrigin rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DORueda"/>
-        <madeFrom rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape"/>
-        <producedBy rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#El_Perro_Verde_2021">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoWine"/>
+        <hasDesignationOrigin rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda"/>
+        <madeFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape"/>
+        <producedBy rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Angel_Lorenzo_Cachazo"/>
         <acidity rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">6</acidity>
         <body rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</body>
         <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.9</price>
@@ -1973,50 +2038,50 @@
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021 -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Marieta_2021 -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoWine"/>
-        <hasDesignationOrigin rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas"/>
-        <madeFrom rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape"/>
-        <producedBy rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Marieta_2021">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoWine"/>
+        <hasDesignationOrigin rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas"/>
+        <madeFrom rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape"/>
+        <producedBy rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Bodegas_Martin_Codax"/>
         <acidity rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">6</acidity>
         <body rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</body>
         <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.9</price>
@@ -2028,126 +2093,126 @@
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SpainCountry"/>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape -->
+    <!-- https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape"/>
     </owl:NamedIndividual>
     
 
@@ -2161,371 +2226,371 @@
      -->
 
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape">
         <rdfs:comment>Albariño Grape</rdfs:comment>
         <rdfs:label>Albariño Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape">
         <rdfs:comment>Cabernet Sauvignon Grape</rdfs:comment>
         <rdfs:label>Cabernet Sauvignon Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape">
         <rdfs:comment>Carignan Grape</rdfs:comment>
         <rdfs:label>Carignan Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape">
         <rdfs:comment>Carménère Grape</rdfs:comment>
         <rdfs:label>Carménère Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape">
         <rdfs:comment>Chardonnay Grape</rdfs:comment>
         <rdfs:label>Chardonnay Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona">
         <rdfs:comment>DO Abona</rdfs:comment>
         <rdfs:label>DO Abona</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella">
         <rdfs:comment>DO Alella</rdfs:comment>
         <rdfs:label>DO Alella</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante">
         <rdfs:comment>DO Alicante</rdfs:comment>
         <rdfs:label>DO Alicante</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa">
         <rdfs:comment>DO Almansa</rdfs:comment>
         <rdfs:label>DO Almansa</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza">
         <rdfs:comment>DO Arlanza</rdfs:comment>
         <rdfs:label>DO Arlanza</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes">
         <rdfs:comment>DO Arribes</rdfs:comment>
         <rdfs:label>DO Arribes</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo">
         <rdfs:comment>DO Bierzo</rdfs:comment>
         <rdfs:label>DO Bierzo</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem">
         <rdfs:comment>DO Binissalem</rdfs:comment>
         <rdfs:label>DO Binissalem</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas">
         <rdfs:comment>DO Bullas</rdfs:comment>
         <rdfs:label>DO Bullas</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud">
         <rdfs:comment>DO Calatayud</rdfs:comment>
         <rdfs:label>DO Calatayud</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja">
         <rdfs:comment>DO Campo de Borja</rdfs:comment>
         <rdfs:label>DO Campo de Borja</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas">
         <rdfs:comment>DO Cangas</rdfs:comment>
         <rdfs:label>DO Cangas</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena">
         <rdfs:comment>DO Cariñena</rdfs:comment>
         <rdfs:label>DO Cariñena</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna">
         <rdfs:comment>DO Cataluña</rdfs:comment>
         <rdfs:label>DO Cataluña</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCava">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava">
         <rdfs:comment>DO Cava</rdfs:comment>
         <rdfs:label>DO Cava</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava">
         <rdfs:comment>DO Chacolí de Álava</rdfs:comment>
         <rdfs:label>DO Chacolí de Álava</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia">
         <rdfs:comment>DO Chacolí de Bizkaia</rdfs:comment>
         <rdfs:label>DO Chacolí de Bizkaia</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria">
         <rdfs:comment>DO Chacolí de Getaria</rdfs:comment>
         <rdfs:label>DO Chacolí de Getaria</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales">
         <rdfs:comment>DO Cigales</rdfs:comment>
         <rdfs:label>DO Cigales</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera">
         <rdfs:comment>DO Conca de Barberà</rdfs:comment>
         <rdfs:label>DO Conca de Barberà</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva">
         <rdfs:comment>DO Condado de Huelva</rdfs:comment>
         <rdfs:label>DO Condado de Huelva</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre">
         <rdfs:comment>DO Costers del Segre</rdfs:comment>
         <rdfs:label>DO Costers del Segre</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro">
         <rdfs:comment>DO El Hierro</rdfs:comment>
         <rdfs:label>DO El Hierro</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda">
         <rdfs:comment>DO Empordà</rdfs:comment>
         <rdfs:label>DO Empordà</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria">
         <rdfs:comment>DO Gran Canaria</rdfs:comment>
         <rdfs:label>DO Gran Canaria</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry">
         <rdfs:comment>DO Jerez-Xeres-Sherry</rdfs:comment>
         <rdfs:label>DO Jerez-Xeres-Sherry</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla">
         <rdfs:comment>DO Jumilla</rdfs:comment>
         <rdfs:label>DO Jumilla</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera">
         <rdfs:comment>DO La Gomera</rdfs:comment>
         <rdfs:label>DO La Gomera</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha">
         <rdfs:comment>DO La Mancha</rdfs:comment>
         <rdfs:label>DO La Mancha</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma">
         <rdfs:comment>DO La Palma</rdfs:comment>
         <rdfs:label>DO La Palma</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote">
         <rdfs:comment>DO Lanzarote</rdfs:comment>
         <rdfs:label>DO Lanzarote</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon">
         <rdfs:comment>DO León</rdfs:comment>
         <rdfs:label>DO León</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga">
         <rdfs:comment>DO Málaga</rdfs:comment>
         <rdfs:label>DO Málaga</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela">
         <rdfs:comment>DO Manchuela</rdfs:comment>
         <rdfs:label>DO Manchuela</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda">
         <rdfs:comment>DO Manzanilla Sanlucar de Barrameda</rdfs:comment>
         <rdfs:label>DO Manzanilla Sanlucar de Barrameda</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida">
         <rdfs:comment>DO Méntrida</rdfs:comment>
         <rdfs:label>DO Méntrida</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar">
         <rdfs:comment>DO Mondejar</rdfs:comment>
         <rdfs:label>DO Mondejar</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei">
         <rdfs:comment>DO Monterrei</rdfs:comment>
         <rdfs:label>DO Monterrei</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles">
         <rdfs:comment>DO Montilla-Moriles</rdfs:comment>
         <rdfs:label>DO Montilla-Moriles</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant">
         <rdfs:comment>DO Montsant</rdfs:comment>
         <rdfs:label>DO Montsant</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra">
         <rdfs:comment>DO Navarra</rdfs:comment>
         <rdfs:label>DO Navarra</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes">
         <rdfs:comment>DO Penedes</rdfs:comment>
         <rdfs:label>DO Penedes</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages">
         <rdfs:comment>DO Pla de Bages</rdfs:comment>
         <rdfs:label>DO Pla de Bages</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant">
         <rdfs:comment>DO Pla i Llevant</rdfs:comment>
         <rdfs:label>DO Pla i Llevant</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat">
         <rdfs:comment>DOCa Priorat</rdfs:comment>
         <rdfs:label>DOCa Priorat</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas">
         <rdfs:comment>DO Rias Baixas</rdfs:comment>
         <rdfs:label>DO Rias Baixas</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra">
         <rdfs:comment>DO Ribeira Sacra</rdfs:comment>
         <rdfs:label>DO Ribeira Sacra</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro">
         <rdfs:comment>DO Ribeiro</rdfs:comment>
         <rdfs:label>DO Ribeiro</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero">
         <rdfs:comment>DO Ribera del Duero</rdfs:comment>
         <rdfs:label>DO Ribera del Duero</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana">
         <rdfs:comment>DO Ribera del Guadiana</rdfs:comment>
         <rdfs:label>DO Ribera del Guadiana</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar">
         <rdfs:comment>DO Ribera del Júcar</rdfs:comment>
         <rdfs:label>DO Ribera del Júcar</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORioja">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja">
         <rdfs:comment>DOCa Rioja</rdfs:comment>
         <rdfs:label>DOCa Rioja</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DORueda">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda">
         <rdfs:comment>DO Rueda</rdfs:comment>
         <rdfs:label>DO Rueda</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga">
         <rdfs:comment>DO Sierras de Malaga</rdfs:comment>
         <rdfs:label>DO Sierras de Malaga</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano">
         <rdfs:comment>DO Somontano</rdfs:comment>
         <rdfs:label>DO Somontano</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo">
         <rdfs:comment>DO Tacoronte-Acentejo</rdfs:comment>
         <rdfs:label>DO Tacoronte-Acentejo</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona">
         <rdfs:comment>DO Tarragona</rdfs:comment>
         <rdfs:label>DO Tarragona</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta">
         <rdfs:comment>DO Terra Alta</rdfs:comment>
         <rdfs:label>DO Terra Alta</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora">
         <rdfs:comment>DO Tierra del Vino de Zamora</rdfs:comment>
         <rdfs:label>DO Tierra del Vino de Zamora</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOToro">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro">
         <rdfs:comment>DO Toro</rdfs:comment>
         <rdfs:label>DO Toro</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles">
         <rdfs:comment>DO Ucles</rdfs:comment>
         <rdfs:label>DO Ucles</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena">
         <rdfs:comment>DO Utiel-Requena</rdfs:comment>
         <rdfs:label>DO Utiel-Requena</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras">
         <rdfs:comment>DO Valdeorras</rdfs:comment>
         <rdfs:label>DO Valdeorras</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas">
         <rdfs:comment>DO Valdepeñas</rdfs:comment>
         <rdfs:label>DO Valdepeñas</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia">
         <rdfs:comment>DO Valencia</rdfs:comment>
         <rdfs:label>DO Valencia</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar">
         <rdfs:comment>DO Valle de Guimar</rdfs:comment>
         <rdfs:label>DO Valle de Guimar</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava">
         <rdfs:comment>DO Valle de la Orotava</rdfs:comment>
         <rdfs:label>DO Valle de la Orotava</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid">
         <rdfs:comment>DO Vinos de Madrid</rdfs:comment>
         <rdfs:label>DO Vinos de Madrid</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora">
         <rdfs:comment>DO Ycoden-Daute-Isora</rdfs:comment>
         <rdfs:label>DO Ycoden-Daute-Isora</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla">
         <rdfs:comment>DO Yecla</rdfs:comment>
         <rdfs:label>DO Yecla</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape">
         <rdfs:comment>Garnacha Grape</rdfs:comment>
         <rdfs:label>Garnacha Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape">
         <rdfs:comment>Gewürztraminer Grape</rdfs:comment>
         <rdfs:label>Gewürztraminer Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape">
         <rdfs:comment>Macabeo Grape</rdfs:comment>
         <rdfs:label>Macabeo Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape">
         <rdfs:comment>Malbec Grape</rdfs:comment>
         <rdfs:label>Malbec Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape">
         <rdfs:comment>Merlot Grape</rdfs:comment>
         <rdfs:label>Merlot Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape">
         <rdfs:comment>Moscatel Grape</rdfs:comment>
         <rdfs:label>Moscatel Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape">
         <rdfs:comment>Nebbiolo Grape</rdfs:comment>
         <rdfs:label>Nebbiolo Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape">
         <rdfs:comment>Parellada Grape</rdfs:comment>
         <rdfs:label>Parellada Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape">
         <rdfs:comment>Pinot Meunier Grape</rdfs:comment>
         <rdfs:label>Pinot Meunier Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape">
         <rdfs:comment>Pinot Noir Grape</rdfs:comment>
         <rdfs:label>Pinot Noir Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape">
         <rdfs:comment>Riesling Grape</rdfs:comment>
         <rdfs:label>Riesling Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape">
         <rdfs:comment>Sauvignon Blanc Grape</rdfs:comment>
         <rdfs:label>Sauvignon Blanc Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape">
         <rdfs:comment>Syrah Grape</rdfs:comment>
         <rdfs:label>Syrah Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape">
         <rdfs:comment>Tempranillo Grape</rdfs:comment>
         <rdfs:label>Tempranillo Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape">
         <rdfs:comment>Trepat Grape</rdfs:comment>
         <rdfs:label>Trepat Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape">
         <rdfs:comment>Verdejo Grape</rdfs:comment>
         <rdfs:label>Verdejo Grape</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape">
         <rdfs:comment>Xarel·lo Grape</rdfs:comment>
         <rdfs:label>Xarel·lo Grape</rdfs:label>
     </rdf:Description>
