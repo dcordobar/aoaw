@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf"
      xml:base="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,14 +11,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#terms:">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf">
+        <ns:license>https://creativecommons.org/licenses/by/4.0/</ns:license>
         <dc:creator>Daniel Córdoba Roldán</dc:creator>
         <dc:description>An Ontology About Wine
 
 In this ontology you can find information about types of wine, designation of origin, grape variety and wineries.</dc:description>
-        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://creativecommons.org/licenses/by/4.0/</dc:rights>
         <dc:title>AOAW - An Ontology About Wine</dc:title>
         <owl:versionInfo>1.0.0</owl:versionInfo>
-        <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
     </owl:Ontology>
     
 
@@ -30,6 +30,12 @@ In this ontology you can find information about types of wine, designation of or
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
     
 
 
