@@ -99,6 +99,7 @@ In this ontology you can find information about types of wine, designation of or
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#hasWinery">
         <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
         <rdfs:comment>Relates a country with the wineries located in it</rdfs:comment>
         <rdfs:label>hasWinery</rdfs:label>
     </owl:ObjectProperty>
@@ -109,6 +110,7 @@ In this ontology you can find information about types of wine, designation of or
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#locatedAt">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Winery"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#Country"/>
         <rdfs:comment>Indicates the country where the winery is located</rdfs:comment>
         <rdfs:label>locatedAt</rdfs:label>
     </owl:ObjectProperty>
@@ -2367,6 +2369,119 @@ In this ontology you can find information about types of wine, designation of or
     <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape">
         <rdfs:comment>Xarel·lo Grape</rdfs:comment>
         <rdfs:label>Xarel·lo Grape</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#AlbarinoGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CabernetSauvignonGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarignanGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#CarmenereGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ChardonnayGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GarnachaGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#GewurztraminerGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MacabeoGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MalbecGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MerlotGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#MoscatelGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#NebbioloGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#ParelladaGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotMeunierGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#PinotNoirGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#RieslingGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SauvignonBlancGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#SyrahGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TempranilloGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#TrepatGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#VerdejoGrape"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#XarelloGrape"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAbona"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlella"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlicante"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOAlmansa"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArlanza"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOArribes"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBierzo"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBinissalem"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOBullas"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCalatayud"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCampoBorja"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCangas"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCarinena"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCataluna"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCava"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliAlava"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliBizkaia"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOChacoliGetaria"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCigales"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOConcaBarbera"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCondadoHuelva"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOCostersSegre"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOElHierro"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOEmporda"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOGranCanaria"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJerezXeresSherry"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOJumilla"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaGomera"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaMancha"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLaPalma"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLanzarote"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOLeon"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMalaga"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManchuela"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOManzanillaSanlucarBarrameda"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMentrida"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMondejar"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMonterrei"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontillaMoriles"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOMontsant"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DONavarra"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPenedes"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaBages"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPlaLlevant"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOPriorat"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiasBaixas"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiraSacra"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORibeiro"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaDuero"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaGuadiana"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORiberaJucar"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORioja"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DORueda"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSierrasMálaga"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOSomontano"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTacoronteAcentejo"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTarragona"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTerraAlta"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOTierraVinoZamora"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOToro"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUcles"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOUtielRequena"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdeorras"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValdepenas"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValencia"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleGuimar"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOValleOrotava"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOVinosMadrid"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYcodenDauteIsora"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/dcordobar/aoaw/main/aoaw.rdf#DOYecla"/>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
