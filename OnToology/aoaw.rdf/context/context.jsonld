@@ -1,0 +1,373 @@
+{
+  "@context" : {
+    "DOArlanza" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza"
+    },
+    "DOBierzo" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo"
+    },
+    "MerlotGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape"
+    },
+    "DORiberaDuero" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero"
+    },
+    "RieslingGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape"
+    },
+    "DOLeon" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon"
+    },
+    "DOChacoliGetaria" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria"
+    },
+    "ParelladaGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape"
+    },
+    "hasDesignationOrigin" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin",
+      "@type" : "@id"
+    },
+    "Winery" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Winery"
+    },
+    "DOCigales" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales"
+    },
+    "DOMonterrei" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei"
+    },
+    "SauvignonBlancGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Country"
+    },
+    "VerdejoGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape"
+    },
+    "DOLaMancha" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha"
+    },
+    "madeFrom" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom",
+      "@type" : "@id"
+    },
+    "body" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#body",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "DOAlmansa" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa"
+    },
+    "DOMalaga" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga"
+    },
+    "presentOn" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#presentOn",
+      "@type" : "@id"
+    },
+    "DOLaPalma" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma"
+    },
+    "DOValleGuimar" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar"
+    },
+    "DOUcles" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles"
+    },
+    "DOGranCanaria" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria"
+    },
+    "producedBy" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#producedBy",
+      "@type" : "@id"
+    },
+    "AlbarinoWine" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoWine"
+    },
+    "DOLaGomera" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera"
+    },
+    "DOAlella" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella"
+    },
+    "DOValencia" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia"
+    },
+    "DOValdeorras" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "DOMondejar" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar"
+    },
+    "DOVinosMadrid" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid"
+    },
+    "DOMontsant" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant"
+    },
+    "DesignationOrigin" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin"
+    },
+    "DORiberaGuadiana" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana"
+    },
+    "GarnachaGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape"
+    },
+    "DOPlaBages" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages"
+    },
+    "PinotNoirGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape"
+    },
+    "DOCostersSegre" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre"
+    },
+    "DOMontillaMoriles" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles"
+    },
+    "DORiasBaixas" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas"
+    },
+    "PinotMeunierGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape"
+    },
+    "TempranilloWine" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloWine"
+    },
+    "DOEmporda" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda"
+    },
+    "vintage" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#vintage",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "DOTarragona" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona"
+    },
+    "MacabeoGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape"
+    },
+    "DOUtielRequena" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena"
+    },
+    "DOToro" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOToro"
+    },
+    "DOElHierro" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro"
+    },
+    "DOPlaLlevant" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant"
+    },
+    "DOCampoBorja" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja"
+    },
+    "DORibeiro" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro"
+    },
+    "DORioja" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORioja"
+    },
+    "DOAlicante" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante"
+    },
+    "MoscatelGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape"
+    },
+    "DOChacoliBizkaia" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia"
+    },
+    "DOLanzarote" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote"
+    },
+    "ID" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#ID"
+    },
+    "DOYecla" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla"
+    },
+    "DOYcodenDauteIsora" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora"
+    },
+    "DOMentrida" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida"
+    },
+    "DOManchuela" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela"
+    },
+    "DORibeiraSacra" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra"
+    },
+    "acidity" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#acidity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "GewurztraminerGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape"
+    },
+    "NebbioloGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape"
+    },
+    "DOSomontano" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano"
+    },
+    "DOArribes" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes"
+    },
+    "WhiteWine" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#WhiteWine"
+    },
+    "TempranilloGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape"
+    },
+    "DOConcaBarbera" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera"
+    },
+    "produces" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#produces",
+      "@type" : "@id"
+    },
+    "DONavarra" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra"
+    },
+    "AlbarinoGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape"
+    },
+    "RoseWine" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#RoseWine"
+    },
+    "CabernetSauvignonGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape"
+    },
+    "DOJerezXeresSherry" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry"
+    },
+    "DOPenedes" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes"
+    },
+    "DOAbona" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona"
+    },
+    "DOTerraAlta" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta"
+    },
+    "DOCalatayud" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud"
+    },
+    "DOSierrasMálaga" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga"
+    },
+    "DOManzanillaSanlucarBarrameda" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda"
+    },
+    "ChardonnayGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape"
+    },
+    "DOCangas" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas"
+    },
+    "MalbecGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape"
+    },
+    "DOCondadoHuelva" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva"
+    },
+    "DOPriorat" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat"
+    },
+    "DOChacoliAlava" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava"
+    },
+    "DOValdepenas" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas"
+    },
+    "DOCarinena" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "VerdejoWine" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoWine"
+    },
+    "price" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#price",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "DOTacoronteAcentejo" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo"
+    },
+    "sparkling" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#sparkling",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "DOBullas" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas"
+    },
+    "DOCava" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCava"
+    },
+    "DOBinissalem" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem"
+    },
+    "DOValleOrotava" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava"
+    },
+    "XarelloGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape"
+    },
+    "grantTo" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#grantTo",
+      "@type" : "@id"
+    },
+    "hasCountry" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry",
+      "@type" : "@id"
+    },
+    "CarmenereGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape"
+    },
+    "TrepatGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape"
+    },
+    "SyrahGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape"
+    },
+    "GrapeVariety" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety"
+    },
+    "DOJumilla" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla"
+    },
+    "DOTierraVinoZamora" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora"
+    },
+    "CarignanGrape" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape"
+    },
+    "DORiberaJucar" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar"
+    },
+    "DORueda" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DORueda"
+    },
+    "RedWine" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#RedWine"
+    },
+    "Wine" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#Wine"
+    },
+    "DOCataluna" : {
+      "@id" : "http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna"
+    }
+  }
+}

@@ -1,0 +1,1309 @@
+<http://www.semanticweb.org/dani/ontologies/aoaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#ID
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#grantTo
+<http://www.semanticweb.org/dani/ontologies/aoaw#grantTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#grantTo> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#grantTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#grantTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry
+<http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin
+<http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom
+<http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/dani/ontologies/aoaw#presentOn> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#presentOn
+<http://www.semanticweb.org/dani/ontologies/aoaw#presentOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#presentOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#presentOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#producedBy
+<http://www.semanticweb.org/dani/ontologies/aoaw#producedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#producedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/dani/ontologies/aoaw#produces> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#producedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#producedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#produces
+<http://www.semanticweb.org/dani/ontologies/aoaw#produces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#produces> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#produces> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#acidity
+<http://www.semanticweb.org/dani/ontologies/aoaw#acidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#acidity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#acidity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#body
+<http://www.semanticweb.org/dani/ontologies/aoaw#body> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#body> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#body> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#price
+<http://www.semanticweb.org/dani/ontologies/aoaw#price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#price> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#price> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#price> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#price> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#sparkling
+<http://www.semanticweb.org/dani/ontologies/aoaw#sparkling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#sparkling> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#sparkling> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#vintage
+<http://www.semanticweb.org/dani/ontologies/aoaw#vintage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#vintage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#vintage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoWine
+<http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoWine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoWine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#WhiteWine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoWine> <http://www.w3.org/2000/01/rdf-schema#comment> "Albariño wine" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoWine> <http://www.w3.org/2000/01/rdf-schema#label> "Albariño wine" .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#Country
+<http://www.semanticweb.org/dani/ontologies/aoaw#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCava
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCava> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCava> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra
+<http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORioja
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORioja> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORioja> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORueda
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORueda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORueda> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOToro
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOToro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOToro> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin
+<http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#grantTo> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety
+<http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#presentOn> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#RedWine
+<http://www.semanticweb.org/dani/ontologies/aoaw#RedWine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#RedWine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#RoseWine
+<http://www.semanticweb.org/dani/ontologies/aoaw#RoseWine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#RoseWine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloWine
+<http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloWine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloWine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#RedWine> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoWine
+<http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoWine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoWine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#WhiteWine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoWine> <http://www.w3.org/2000/01/rdf-schema#comment> "Verdejo wine" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoWine> <http://www.w3.org/2000/01/rdf-schema#label> "Verdejo wine" .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#WhiteWine
+<http://www.semanticweb.org/dani/ontologies/aoaw#WhiteWine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#WhiteWine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#Wine
+<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#producedBy> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
+_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#producedBy> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/dani/ontologies/aoaw#DesignationOrigin> .
+_:genid8 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#acidity> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#body> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid11 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#price> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid12 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#sparkling> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Wine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#vintage> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#Winery
+<http://www.semanticweb.org/dani/ontologies/aoaw#Winery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Winery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#Wine> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/dani/ontologies/aoaw#produces> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dani/ontologies/aoaw#GrapeVariety> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#Aalto
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto> <http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry> <http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto> <http://www.w3.org/2000/01/rdf-schema#comment> "Aalto es el emblemático nombre de una bodega que se ha convertido en un referente en la Ribera del Duero. La dilatada experiencia de Mariano García, quien fuera enólogo de Vega Sicilia durante treinta años, se siente en la fuerza y complejidad de los vinos." .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto> <http://www.w3.org/2000/01/rdf-schema#label> "Bodegas Aalto" .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloWine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020> <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> <http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020> <http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020> <http://www.semanticweb.org/dani/ontologies/aoaw#producedBy> <http://www.semanticweb.org/dani/ontologies/aoaw#Aalto> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020> <http://www.semanticweb.org/dani/ontologies/aoaw#acidity> "7"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020> <http://www.semanticweb.org/dani/ontologies/aoaw#body> "8"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020> <http://www.semanticweb.org/dani/ontologies/aoaw#price> "36.95"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020> <http://www.semanticweb.org/dani/ontologies/aoaw#sparkling> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020> <http://www.semanticweb.org/dani/ontologies/aoaw#vintage> "2020"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020> <http://www.w3.org/2000/01/rdf-schema#comment> "Aalto es uno de los grandes referentes de Ribera del Duero, un vino de un gran equilibrio y complejidad, lleno de fuerza y personalidad, maduro y elegante, que debe sus virtudes a unas magníficas uvas de la variedad tinta fina (tempranillo), a una diversidad de suelos y a la vasta experiencia de Mariano García, el enólogo que durante treinta años fue el responsable de la elaboración de los vinos de Vega Sicilia. Desde siempre, ha sido uno de los mejores ejemplos de ribera moderno, convertido hoy en un clásico, un ribera esencial y un vino para las grandes ocasiones." .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Aalto_2020> <http://www.w3.org/2000/01/rdf-schema#label> "Aalto 2020" .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo
+<http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo> <http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry> <http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo> <http://www.w3.org/2000/01/rdf-schema#comment> "Bodegas Ángel Lorenzo Cachazo" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo> <http://www.w3.org/2000/01/rdf-schema#label> "Ángel Lorenzo Cachazo" .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax
+<http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#Winery> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax> <http://www.semanticweb.org/dani/ontologies/aoaw#hasCountry> <http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax> <http://www.w3.org/2000/01/rdf-schema#comment> "Bodegas Martín Códax" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax> <http://www.w3.org/2000/01/rdf-schema#label> "Bodegas Martín Códax" .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCava
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCava> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCava> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOCava> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra
+<http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORioja
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORioja> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORioja> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DORioja> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DORueda
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORueda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORueda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DORueda> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOToro
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOToro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOToro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOToro> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021
+<http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoWine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> <http://www.semanticweb.org/dani/ontologies/aoaw#DORueda> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#producedBy> <http://www.semanticweb.org/dani/ontologies/aoaw#Angel_Lorenzo_Cachazo> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#acidity> "6"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#body> "4"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#price> "10.9"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#sparkling> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#vintage> "2021"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021> <http://www.w3.org/2000/01/rdf-schema#comment> "Verdejo El Perro Verde 2021" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#El_Perro_Verde_2021> <http://www.w3.org/2000/01/rdf-schema#label> "El Perro Verde 2021" .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021
+<http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoWine> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#hasDesignationOrigin> <http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#madeFrom> <http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#producedBy> <http://www.semanticweb.org/dani/ontologies/aoaw#Bodegas_Martin_Codax> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#acidity> "6"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#body> "4"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#price> "9.9"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#sparkling> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021> <http://www.semanticweb.org/dani/ontologies/aoaw#vintage> "2021"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021> <http://www.w3.org/2000/01/rdf-schema#comment> "Albariño Marieta 2021" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#Marieta_2021> <http://www.w3.org/2000/01/rdf-schema#label> "Marieta 2021" .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry
+<http://www.semanticweb.org/dani/ontologies/aoaw#SpainCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape> .
+# 
+# http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape
+<http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Albariño Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#AlbarinoGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Albariño Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Cabernet Sauvignon Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#CabernetSauvignonGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Cabernet Sauvignon Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Carignan Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#CarignanGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Carignan Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Carménère Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#CarmenereGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Carménère Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Chardonnay Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#ChardonnayGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Chardonnay Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Abona" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAbona> <http://www.w3.org/2000/01/rdf-schema#label> "DO Abona" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Alella" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlella> <http://www.w3.org/2000/01/rdf-schema#label> "DO Alella" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Alicante" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlicante> <http://www.w3.org/2000/01/rdf-schema#label> "DO Alicante" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Almansa" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOAlmansa> <http://www.w3.org/2000/01/rdf-schema#label> "DO Almansa" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Arlanza" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOArlanza> <http://www.w3.org/2000/01/rdf-schema#label> "DO Arlanza" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Arribes" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOArribes> <http://www.w3.org/2000/01/rdf-schema#label> "DO Arribes" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Bierzo" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBierzo> <http://www.w3.org/2000/01/rdf-schema#label> "DO Bierzo" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Binissalem" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBinissalem> <http://www.w3.org/2000/01/rdf-schema#label> "DO Binissalem" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Bullas" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOBullas> <http://www.w3.org/2000/01/rdf-schema#label> "DO Bullas" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Calatayud" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCalatayud> <http://www.w3.org/2000/01/rdf-schema#label> "DO Calatayud" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Campo de Borja" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCampoBorja> <http://www.w3.org/2000/01/rdf-schema#label> "DO Campo de Borja" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Cangas" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCangas> <http://www.w3.org/2000/01/rdf-schema#label> "DO Cangas" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Cariñena" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCarinena> <http://www.w3.org/2000/01/rdf-schema#label> "DO Cariñena" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Cataluña" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCataluna> <http://www.w3.org/2000/01/rdf-schema#label> "DO Cataluña" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCava> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Cava" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCava> <http://www.w3.org/2000/01/rdf-schema#label> "DO Cava" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Chacolí de Álava" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliAlava> <http://www.w3.org/2000/01/rdf-schema#label> "DO Chacolí de Álava" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Chacolí de Bizkaia" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliBizkaia> <http://www.w3.org/2000/01/rdf-schema#label> "DO Chacolí de Bizkaia" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Chacolí de Getaria" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOChacoliGetaria> <http://www.w3.org/2000/01/rdf-schema#label> "DO Chacolí de Getaria" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Cigales" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCigales> <http://www.w3.org/2000/01/rdf-schema#label> "DO Cigales" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Conca de Barberà" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOConcaBarbera> <http://www.w3.org/2000/01/rdf-schema#label> "DO Conca de Barberà" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Condado de Huelva" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCondadoHuelva> <http://www.w3.org/2000/01/rdf-schema#label> "DO Condado de Huelva" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Costers del Segre" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOCostersSegre> <http://www.w3.org/2000/01/rdf-schema#label> "DO Costers del Segre" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro> <http://www.w3.org/2000/01/rdf-schema#comment> "DO El Hierro" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOElHierro> <http://www.w3.org/2000/01/rdf-schema#label> "DO El Hierro" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Empordà" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOEmporda> <http://www.w3.org/2000/01/rdf-schema#label> "DO Empordà" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Gran Canaria" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOGranCanaria> <http://www.w3.org/2000/01/rdf-schema#label> "DO Gran Canaria" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Jerez-Xeres-Sherry" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOJerezXeresSherry> <http://www.w3.org/2000/01/rdf-schema#label> "DO Jerez-Xeres-Sherry" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Jumilla" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOJumilla> <http://www.w3.org/2000/01/rdf-schema#label> "DO Jumilla" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera> <http://www.w3.org/2000/01/rdf-schema#comment> "DO La Gomera" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaGomera> <http://www.w3.org/2000/01/rdf-schema#label> "DO La Gomera" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha> <http://www.w3.org/2000/01/rdf-schema#comment> "DO La Mancha" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaMancha> <http://www.w3.org/2000/01/rdf-schema#label> "DO La Mancha" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma> <http://www.w3.org/2000/01/rdf-schema#comment> "DO La Palma" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLaPalma> <http://www.w3.org/2000/01/rdf-schema#label> "DO La Palma" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Lanzarote" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLanzarote> <http://www.w3.org/2000/01/rdf-schema#label> "DO Lanzarote" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon> <http://www.w3.org/2000/01/rdf-schema#comment> "DO León" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOLeon> <http://www.w3.org/2000/01/rdf-schema#label> "DO León" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Málaga" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMalaga> <http://www.w3.org/2000/01/rdf-schema#label> "DO Málaga" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Manchuela" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOManchuela> <http://www.w3.org/2000/01/rdf-schema#label> "DO Manchuela" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Manzanilla Sanlucar de Barrameda" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOManzanillaSanlucarBarrameda> <http://www.w3.org/2000/01/rdf-schema#label> "DO Manzanilla Sanlucar de Barrameda" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Méntrida" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMentrida> <http://www.w3.org/2000/01/rdf-schema#label> "DO Méntrida" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Mondejar" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMondejar> <http://www.w3.org/2000/01/rdf-schema#label> "DO Mondejar" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Monterrei" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMonterrei> <http://www.w3.org/2000/01/rdf-schema#label> "DO Monterrei" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Montilla-Moriles" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMontillaMoriles> <http://www.w3.org/2000/01/rdf-schema#label> "DO Montilla-Moriles" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Montsant" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOMontsant> <http://www.w3.org/2000/01/rdf-schema#label> "DO Montsant" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Navarra" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DONavarra> <http://www.w3.org/2000/01/rdf-schema#label> "DO Navarra" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Penedes" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPenedes> <http://www.w3.org/2000/01/rdf-schema#label> "DO Penedes" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Pla de Bages" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaBages> <http://www.w3.org/2000/01/rdf-schema#label> "DO Pla de Bages" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Pla i Llevant" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPlaLlevant> <http://www.w3.org/2000/01/rdf-schema#label> "DO Pla i Llevant" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat> <http://www.w3.org/2000/01/rdf-schema#comment> "DOCa Priorat" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOPriorat> <http://www.w3.org/2000/01/rdf-schema#label> "DOCa Priorat" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Rias Baixas" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiasBaixas> <http://www.w3.org/2000/01/rdf-schema#label> "DO Rias Baixas" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Ribeira Sacra" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiraSacra> <http://www.w3.org/2000/01/rdf-schema#label> "DO Ribeira Sacra" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Ribeiro" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORibeiro> <http://www.w3.org/2000/01/rdf-schema#label> "DO Ribeiro" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Ribera del Duero" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaDuero> <http://www.w3.org/2000/01/rdf-schema#label> "DO Ribera del Duero" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Ribera del Guadiana" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaGuadiana> <http://www.w3.org/2000/01/rdf-schema#label> "DO Ribera del Guadiana" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Ribera del Júcar" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORiberaJucar> <http://www.w3.org/2000/01/rdf-schema#label> "DO Ribera del Júcar" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORioja> <http://www.w3.org/2000/01/rdf-schema#comment> "DOCa Rioja" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORioja> <http://www.w3.org/2000/01/rdf-schema#label> "DOCa Rioja" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORueda> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Rueda" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DORueda> <http://www.w3.org/2000/01/rdf-schema#label> "DO Rueda" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Sierras de Malaga" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOSierrasMálaga> <http://www.w3.org/2000/01/rdf-schema#label> "DO Sierras de Malaga" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Somontano" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOSomontano> <http://www.w3.org/2000/01/rdf-schema#label> "DO Somontano" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Tacoronte-Acentejo" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTacoronteAcentejo> <http://www.w3.org/2000/01/rdf-schema#label> "DO Tacoronte-Acentejo" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Tarragona" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTarragona> <http://www.w3.org/2000/01/rdf-schema#label> "DO Tarragona" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Terra Alta" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTerraAlta> <http://www.w3.org/2000/01/rdf-schema#label> "DO Terra Alta" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Tierra del Vino de Zamora" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOTierraVinoZamora> <http://www.w3.org/2000/01/rdf-schema#label> "DO Tierra del Vino de Zamora" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOToro> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Toro" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOToro> <http://www.w3.org/2000/01/rdf-schema#label> "DO Toro" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Ucles" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOUcles> <http://www.w3.org/2000/01/rdf-schema#label> "DO Ucles" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Utiel-Requena" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOUtielRequena> <http://www.w3.org/2000/01/rdf-schema#label> "DO Utiel-Requena" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Valdeorras" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValdeorras> <http://www.w3.org/2000/01/rdf-schema#label> "DO Valdeorras" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Valdepeñas" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValdepenas> <http://www.w3.org/2000/01/rdf-schema#label> "DO Valdepeñas" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Valencia" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValencia> <http://www.w3.org/2000/01/rdf-schema#label> "DO Valencia" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Valle de Guimar" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValleGuimar> <http://www.w3.org/2000/01/rdf-schema#label> "DO Valle de Guimar" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Valle de la Orotava" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOValleOrotava> <http://www.w3.org/2000/01/rdf-schema#label> "DO Valle de la Orotava" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Vinos de Madrid" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOVinosMadrid> <http://www.w3.org/2000/01/rdf-schema#label> "DO Vinos de Madrid" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Ycoden-Daute-Isora" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOYcodenDauteIsora> <http://www.w3.org/2000/01/rdf-schema#label> "DO Ycoden-Daute-Isora" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla> <http://www.w3.org/2000/01/rdf-schema#comment> "DO Yecla" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#DOYecla> <http://www.w3.org/2000/01/rdf-schema#label> "DO Yecla" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Garnacha Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#GarnachaGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Garnacha Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Gewürztraminer Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#GewurztraminerGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Gewürztraminer Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Macabeo Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#MacabeoGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Macabeo Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Malbec Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#MalbecGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Malbec Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Merlot Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#MerlotGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Merlot Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Moscatel Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#MoscatelGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Moscatel Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Nebbiolo Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#NebbioloGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Nebbiolo Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Parellada Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#ParelladaGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Parellada Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Pinot Meunier Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#PinotMeunierGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Pinot Meunier Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Pinot Noir Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#PinotNoirGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Pinot Noir Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Riesling Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#RieslingGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Riesling Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Sauvignon Blanc Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#SauvignonBlancGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Sauvignon Blanc Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Syrah Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#SyrahGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Syrah Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Tempranillo Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#TempranilloGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Tempranillo Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Trepat Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#TrepatGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Trepat Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Verdejo Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#VerdejoGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Verdejo Grape" .
+# 
+<http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape> <http://www.w3.org/2000/01/rdf-schema#comment> "Xarel·lo Grape" .
+<http://www.semanticweb.org/dani/ontologies/aoaw#XarelloGrape> <http://www.w3.org/2000/01/rdf-schema#label> "Xarel·lo Grape" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
